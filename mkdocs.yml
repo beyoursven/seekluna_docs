@@ -1,0 +1,107 @@
+# Project Information
+site_name: Seekluna
+site_url: https://beyoursven.gitee.io/seekluna_docs/ 
+site_author: Seekluna
+
+# Repository
+repo_name: seekluna_docs
+repo_url: https://gitee.com/beyoursven/seekluna_docs
+# edit_uri: edit/main/docs
+
+# Copyright
+copyright: 'Copyright &copy; 2019 - 2024 Seekluna Team'
+
+# Contents
+nav:
+  - L2:
+    - 输入技巧: L2/io_technique.md
+  - data structure:
+    - stack: ds/stack.md
+  - 动态规划:
+    - 理论: dp/theory.md
+    - 记忆化: dp/memorization.md
+    - 单序列 dp: dp/sequence_dp.md
+    - 多序列 dp: dp/multi_sequence_dp.md
+
+
+# Theme
+theme:
+  name: material
+  # custom_dir: 'mkdocs-material/material/templates'
+  static_templates:
+    - 404.html
+  language: 'zh'
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  include_search_page: false
+  search_index_only: true
+  favicon: 'favicon.ico'
+  icon:
+    logo: 'material/school'
+    repo: fontawesome/brands/github
+  features:
+    - content.action.edit
+    - navigation.tabs
+    - navigation.instant
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: ""
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
