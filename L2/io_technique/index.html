@@ -415,6 +415,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getline" class="md-nav__link">
+    <span class="md-ellipsis">
+      getline
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -661,6 +670,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getline" class="md-nav__link">
+    <span class="md-ellipsis">
+      getline
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -737,7 +755,48 @@
 
 <span class="c1">// 输入 3 4 5 回车，然后按 ctrl + z，然后回车，输出 12</span>
 </code></pre></div></td></tr></table></div>
-<p>关于 <code>cin</code> 的失效标记和 <code>while (cin &gt;&gt; )</code> 的原理，以下是 <code>GPT-4</code> 的回答。</p>
+<p><code>cin.putback(c)</code> 可以将字符 <code>c</code> 弹回到输入缓冲区中。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">cin</span><span class="p">.</span><span class="n">putback</span><span class="p">(</span><span class="sc">&#39;1&#39;</span><span class="p">);</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 输入 2</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出 21</span>
+</code></pre></div></td></tr></table></div>
+<p>我们可以利用 <code>cin.putback()</code> 帮助我们，当我们不确定是否要读入整数时，可以先读入一个字符进行检查，如果为整数，则弹回然后重新读入整数。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">cin</span><span class="p">.</span><span class="n">putback</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+<span class="w">  </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><code>cin.get()</code> 函数可以用来读取包括空白字符在内的字符。用法为 <code>cin.get(char 变量名)</code> 或者 <code>变量名 = cin.get()</code>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+
+<span class="c1">// 输入 2 3</span>
+<span class="c1">// 输出 2 3</span>
+</code></pre></div></td></tr></table></div>
+<p>关于 <code>cin</code> 的失效标记和 <code>while (cin &gt;&gt; )</code> 的原理，以下是 GPT-4 的回答。</p>
 <details class="gpt-4 问答">
 <summary>Gpt-4</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">while (cin &gt;&gt; x) 的原理是什么？</label><label for="__tabbed_1_2">cin 流状态是什么？</label></div>
@@ -777,15 +836,44 @@
 </li>
 </ol>
 <p>你可以使用几种方法来检查这些状态标志：
-- <code>cin.good()</code> 检查 <code>goodbit</code>，如果流状态良好，即没有错误，返回 <code>true</code>。
-- <code>cin.eof()</code> 检查 <code>eofbit</code>，如果达到输入末尾，返回 <code>true</code>。
-- <code>cin.fail()</code> 检查 <code>failbit</code> 或 <code>badbit</code>，如果任一错误标志被设置，返回 <code>true</code>。
-- <code>cin.bad()</code> 检查 <code>badbit</code>，如果设置了 <code>badbit</code>，返回 <code>true</code>。</p>
+* <code>cin.good()</code> 检查 <code>goodbit</code>，如果流状态良好，即没有错误，返回 <code>true</code>。
+* <code>cin.eof()</code> 检查 <code>eofbit</code>，如果达到输入末尾，返回 <code>true</code>。
+* <code>cin.fail()</code> 检查 <code>failbit</code> 或 <code>badbit</code>，如果任一错误标志被设置，返回 <code>true</code>。
+* <code>cin.bad()</code> 检查 <code>badbit</code>，如果设置了 <code>badbit</code>，返回 <code>true</code>。</p>
 <p>这些函数允许开发者在进行进一步的输入操作之前验证流的状态，从而在处理输入时做出适当的错误处理。</p>
 </div>
 </div>
 </div>
 </details>
+<h2 id="getline">getline<a class="headerlink" href="#getline" title="Permanent link"></a></h2>
+<p>我们可以使用 <code>getline()</code> 函数按行读入一整行字符串到 <code>string</code> 变量中，用法为 <code>getline(cin, string 变量名);</code>。<code>getline()</code> 默认以换行符为分隔符。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+
+<span class="c1">// 输入 123 abc</span>
+<span class="c1">// 输出 123 abc</span>
+</code></pre></div></td></tr></table></div>
+<p>调用 <code>getline()</code> 函数会将输入缓冲区中直到第一个换行符（包括换行符）的内容全部弹出。在调用 <code>getline()</code> 函数之前，一定要保证之前的换行符一定不在输入缓冲区中。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+
+<span class="c1">// 输入 2，回车，程序立马结束</span>
+<span class="c1">// 应该在 cin &gt;&gt; x; 之后立马跟一个 </span>
+</code></pre></div></td></tr></table></div>
 
 
 
