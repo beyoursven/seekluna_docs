@@ -740,64 +740,51 @@
 <p>关于 <code>cin</code> 的失效标记和 <code>while (cin &gt;&gt; )</code> 的原理，以下是 <code>GPT-4</code> 的回答。</p>
 <details class="gpt-4 问答">
 <summary>Gpt-4</summary>
-<p>=== while (cin &gt;&gt; x) 的原理是什么？</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>在 C++ 中，使用 `while (cin &gt;&gt; x)` 循环是一种常见的方式，用于连续读取输入直到遇到输入结束或错误。这个语句的工作原理基于 `cin` 的状态，具体解释如下：
-
-1. **输入运算符（`&gt;&gt;`）**：当 `cin &gt;&gt; x` 被执行时，C++ 尝试从标准输入（通常是键盘输入）读取数据，并将其存储在变量 `x` 中。类型必须与变量 `x` 的类型匹配，否则会导致错误。
-
-2. **循环条件**：`while` 循环的条件是 `cin &gt;&gt; x` 的结果。在 C++ 中，`cin &gt;&gt; x` 实际上返回 `cin` 对象的引用。当输入成功时（即数据成功读入并且类型匹配），`cin` 保持在有效状态（未设置 `failbit` 或 `badbit`），并被视为一个真值。如果遇到输入错误（例如类型不匹配或输入流结束），`failbit` 或 `badbit` 将被设置，`cin` 对象会转换为假值，因此终止循环。
-
-3. **处理不匹配或错误**：如果输入的数据与 `x` 的类型不匹配，`cin` 的状态将变为错误状态，这导致 `while` 循环终止。例如，如果期望的是一个整数，但用户输入了一些字母，`cin` 将不能将这些字母解释为整数，从而设置 `failbit`。
-
-4. **结束输入**：在 Unix/Linux 系统中，可以通过 Ctrl+D（文件结束符 EOF）来表示输入结束，在 Windows 系统中通常使用 Ctrl+Z。这会使 `cin` 进入文件结束状态（设置 `eofbit`），同时如果没有更多的有效数据，也会设置 `failbit`，从而停止循环。
-
-这种 `while (cin &gt;&gt; x)` 结构非常适合于需要多次读取同类型数据的情况，例如输入一系列数字。当数据正确输入时，循环继续；当遇到不符合要求的输入或输入结束时，循环停止，允许程序继续执行后续操作。
-</code></pre></div></td></tr></table></div>
-<p>=== cin 流状态是什么？</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>在 C++ 中，`cin` 流状态指的是一个输入流的当前状态，这些状态可以帮助开发者了解是否发生了输入错误或其他类型的流问题。C++ 标准库中的输入流对象（如 `cin`）使用状态标志来表示流的当前健康状况。以下是一些常见的 `cin` 流状态标志：
-
-1. **goodbit**: 如果设置了 `goodbit`，表示流未发生错误，状态良好。这是默认状态，没有设置其他任何错误标志时，`goodbit` 会被设置。
-
-2. **eofbit**: 如果在读取期间到达了输入的末尾，将设置 `eofbit`。例如，如果你尝试从文件中读取但已经达到了文件的末尾，就会发生这种情况。
-
-3. **failbit**: 如果因为预期格式外的字符或其他原因导致输入操作失败，则会设置 `failbit`。例如，如果期望输入一个整数，但用户输入了一个字母，就会设置 `failbit`。
-
-4. **badbit**: 如果在读写操作中发生错误，如不可恢复的流错误或设备故障，将设置 `badbit`。设置 `badbit` 通常意味着流不能继续使用。
-
-你可以使用几种方法来检查这些状态标志：
-- `cin.good()` 检查 `goodbit`，如果流状态良好，即没有错误，返回 `true`。
-- `cin.eof()` 检查 `eofbit`，如果达到输入末尾，返回 `true`。
-- `cin.fail()` 检查 `failbit` 或 `badbit`，如果任一错误标志被设置，返回 `true`。
-- `cin.bad()` 检查 `badbit`，如果设置了 `badbit`，返回 `true`。
-
-这些函数允许开发者在进行进一步的输入操作之前验证流的状态，从而在处理输入时做出适当的错误处理。
-</code></pre></div></td></tr></table></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">while (cin &gt;&gt; x) 的原理是什么？</label><label for="__tabbed_1_2">cin 流状态是什么？</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在 C++ 中，使用 <code>while (cin &gt;&gt; x)</code> 循环是一种常见的方式，用于连续读取输入直到遇到输入结束或错误。这个语句的工作原理基于 <code>cin</code> 的状态，具体解释如下：</p>
+<ol>
+<li>
+<p><strong>输入运算符（<code>&gt;&gt;</code>）</strong>：当 <code>cin &gt;&gt; x</code> 被执行时，C++ 尝试从标准输入（通常是键盘输入）读取数据，并将其存储在变量 <code>x</code> 中。类型必须与变量 <code>x</code> 的类型匹配，否则会导致错误。</p>
+</li>
+<li>
+<p><strong>循环条件</strong>：<code>while</code> 循环的条件是 <code>cin &gt;&gt; x</code> 的结果。在 C++ 中，<code>cin &gt;&gt; x</code> 实际上返回 <code>cin</code> 对象的引用。当输入成功时（即数据成功读入并且类型匹配），<code>cin</code> 保持在有效状态（未设置 <code>failbit</code> 或 <code>badbit</code>），并被视为一个真值。如果遇到输入错误（例如类型不匹配或输入流结束），<code>failbit</code> 或 <code>badbit</code> 将被设置，<code>cin</code> 对象会转换为假值，因此终止循环。</p>
+</li>
+<li>
+<p><strong>处理不匹配或错误</strong>：如果输入的数据与 <code>x</code> 的类型不匹配，<code>cin</code> 的状态将变为错误状态，这导致 <code>while</code> 循环终止。例如，如果期望的是一个整数，但用户输入了一些字母，<code>cin</code> 将不能将这些字母解释为整数，从而设置 <code>failbit</code>。</p>
+</li>
+<li>
+<p><strong>结束输入</strong>：在 Unix/Linux 系统中，可以通过 Ctrl+D（文件结束符 EOF）来表示输入结束，在 Windows 系统中通常使用 Ctrl+Z。这会使 <code>cin</code> 进入文件结束状态（设置 <code>eofbit</code>），同时如果没有更多的有效数据，也会设置 <code>failbit</code>，从而停止循环。</p>
+</li>
+</ol>
+<p>这种 <code>while (cin &gt;&gt; x)</code> 结构非常适合于需要多次读取同类型数据的情况，例如输入一系列数字。当数据正确输入时，循环继续；当遇到不符合要求的输入或输入结束时，循环停止，允许程序继续执行后续操作。</p>
+</div>
+<div class="tabbed-block">
+<p>在 C++ 中，<code>cin</code> 流状态指的是一个输入流的当前状态，这些状态可以帮助开发者了解是否发生了输入错误或其他类型的流问题。C++ 标准库中的输入流对象（如 <code>cin</code>）使用状态标志来表示流的当前健康状况。以下是一些常见的 <code>cin</code> 流状态标志：</p>
+<ol>
+<li>
+<p><strong>goodbit</strong>: 如果设置了 <code>goodbit</code>，表示流未发生错误，状态良好。这是默认状态，没有设置其他任何错误标志时，<code>goodbit</code> 会被设置。</p>
+</li>
+<li>
+<p><strong>eofbit</strong>: 如果在读取期间到达了输入的末尾，将设置 <code>eofbit</code>。例如，如果你尝试从文件中读取但已经达到了文件的末尾，就会发生这种情况。</p>
+</li>
+<li>
+<p><strong>failbit</strong>: 如果因为预期格式外的字符或其他原因导致输入操作失败，则会设置 <code>failbit</code>。例如，如果期望输入一个整数，但用户输入了一个字母，就会设置 <code>failbit</code>。</p>
+</li>
+<li>
+<p><strong>badbit</strong>: 如果在读写操作中发生错误，如不可恢复的流错误或设备故障，将设置 <code>badbit</code>。设置 <code>badbit</code> 通常意味着流不能继续使用。</p>
+</li>
+</ol>
+<p>你可以使用几种方法来检查这些状态标志：
+- <code>cin.good()</code> 检查 <code>goodbit</code>，如果流状态良好，即没有错误，返回 <code>true</code>。
+- <code>cin.eof()</code> 检查 <code>eofbit</code>，如果达到输入末尾，返回 <code>true</code>。
+- <code>cin.fail()</code> 检查 <code>failbit</code> 或 <code>badbit</code>，如果任一错误标志被设置，返回 <code>true</code>。
+- <code>cin.bad()</code> 检查 <code>badbit</code>，如果设置了 <code>badbit</code>，返回 <code>true</code>。</p>
+<p>这些函数允许开发者在进行进一步的输入操作之前验证流的状态，从而在处理输入时做出适当的错误处理。</p>
+</div>
+</div>
+</div>
 </details>
 
 
