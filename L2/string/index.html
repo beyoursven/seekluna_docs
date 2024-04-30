@@ -10,11 +10,13 @@
         <meta name="author" content="Seekluna">
       
       
-        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/L2/io_technique/">
+        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/L2/string/">
       
       
+        <link rel="prev" href="../io_technique/">
       
-        <link rel="next" href="../string/">
+      
+        <link rel="next" href="../../ds/stack/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -22,7 +24,7 @@
     
     
       
-        <title>输入技巧 - Seekluna</title>
+        <title>string - Seekluna</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#输入技巧" class="md-skip">
+        <a href="#string-的成员函数" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              输入技巧
+              string
             
           </span>
         </div>
@@ -219,7 +221,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../io_technique/" class="md-tabs__link">
           
   
   L2-入门
@@ -358,6 +360,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_technique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    输入技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -374,7 +397,7 @@
           
   
   <span class="md-ellipsis">
-    输入技巧
+    string
   </span>
   
 
@@ -385,7 +408,7 @@
         
   
   <span class="md-ellipsis">
-    输入技巧
+    string
   </span>
   
 
@@ -407,9 +430,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cin" class="md-nav__link">
+  <a href="#为什么要使用-string" class="md-nav__link">
     <span class="md-ellipsis">
-      cin
+      为什么要使用 string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常规使用" class="md-nav__link">
+    <span class="md-ellipsis">
+      常规使用
     </span>
   </a>
   
@@ -418,9 +450,60 @@
         <li class="md-nav__item">
   <a href="#getline" class="md-nav__link">
     <span class="md-ellipsis">
-      getline
+      getline()
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#运算符重载" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符重载
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符重载">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#赋值运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#关系运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      关系运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#加法运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      加法运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常用成员函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用成员函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -428,27 +511,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../string/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    string
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -683,9 +745,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cin" class="md-nav__link">
+  <a href="#为什么要使用-string" class="md-nav__link">
     <span class="md-ellipsis">
-      cin
+      为什么要使用 string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常规使用" class="md-nav__link">
+    <span class="md-ellipsis">
+      常规使用
     </span>
   </a>
   
@@ -694,9 +765,60 @@
         <li class="md-nav__item">
   <a href="#getline" class="md-nav__link">
     <span class="md-ellipsis">
-      getline
+      getline()
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#运算符重载" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符重载
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符重载">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#赋值运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#关系运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      关系运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#加法运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      加法运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常用成员函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用成员函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -715,7 +837,7 @@
                   
 
   
-    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/L2/io_technique.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/L2/string.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -723,186 +845,146 @@
   
 
 
-<h1 id="输入技巧">输入技巧<a class="headerlink" href="#输入技巧" title="Permanent link"></a></h1>
-<h2 id="cin">cin<a class="headerlink" href="#cin" title="Permanent link"></a></h2>
-<p><code>cin</code> 使用<strong>空白字符</strong>作为数据之间的分隔符，空白字符包含空格符、制表符、换行符。使用 <code>cin &gt;&gt;</code> 方式读取数据时不会将空白字符当做数据处理。观察下面几个例子。</p>
+<h1 id="string-的成员函数">string 的成员函数<a class="headerlink" href="#string-的成员函数" title="Permanent link"></a></h1>
+<h2 id="为什么要使用-string">为什么要使用 string<a class="headerlink" href="#为什么要使用-string" title="Permanent link"></a></h2>
+<p>用字符数组实现字符串是有许多不便的：</p>
+<ul>
+<li>受限于数组的语法设计，不能直接对字符串直接赋值、复制、拼接。</li>
+<li>无法直接比较字符串的字典序大小，需要调用 <code>strcmp</code> 函数。</li>
+</ul>
+<p><code>std::string</code> 是在标准模板库（Standard Template Library）的头文件 <code>&lt;string&gt;</code> 中提供的一个已封装好的字符串类：
+- <code>string</code> 能动态分配空间，无需预先指明字符串的长度。
+- 将一些常用功能封装为成员函数。
+- 体现了 C++ 面向对象的编程特性。</p>
+<h2 id="常规使用">常规使用<a class="headerlink" href="#常规使用" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-
-<span class="c1">// 输入 2 3，输出 2 3</span>
-<span class="c1">// 输入 2 回车 3，输出 2 3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 声明，初始化</span>
+<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">             </span><span class="c1">// 可以直接输入</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">;</span><span class="w">           </span><span class="c1">// 支持下标访问</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">            </span><span class="c1">// 直接输出字符串中的内容</span>
 </code></pre></div></td></tr></table></div>
-<p><code>cin</code> 在遇到无法匹配的字符时会自动分隔。</p>
+<p><code>string</code> 支持类似数组的方式通过下标来存取空间，并且可以直接输入输出。输入时默认以空白字符为分隔符。</p>
+<h2 id="getline">getline()<a class="headerlink" href="#getline" title="Permanent link"></a></h2>
+<p>使用 <code>getline(cin, a)</code> 将一整行字符串读入，以换行符为分隔符。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输入 12?</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出 12 ?</span>
-</code></pre></div></td></tr></table></div>
-<p><code>cin</code> 在读入字符型时不必使用分隔符。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-
-<span class="c1">// 输入 ac，输出 a c</span>
-<span class="c1">// 输入 a c，输出 a c</span>
-<span class="c1">// 输入 a 回车 c，输出 a c</span>
-</code></pre></div></td></tr></table></div>
-<p>读入数据失败时，<code>cin</code> 会获得<strong>失效标记</strong>。<code>cin</code> 失效后无法再使用 <code>cin</code> 进行任何读入。可以将 <code>cin</code> 转为 bool 类型来查看是否失效。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;!&#39;</span><span class="p">;</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// 输入 67?89</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="n">cin</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出 0 67 0 !</span>
-</code></pre></div></td></tr></table></div>
-<p>可以使用 <code>while (cin &gt;&gt; )</code> 的方式连续读取若干输入直到输入结束或者输入出现错误。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// 输入 3 4 5 回车，然后按 ctrl + z，然后回车，输出 12</span>
-</code></pre></div></td></tr></table></div>
-<p><code>cin.putback(c)</code> 可以将字符 <code>c</code> 弹回到输入缓冲区中。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<span class="n">cin</span><span class="p">.</span><span class="n">putback</span><span class="p">(</span><span class="sc">&#39;1&#39;</span><span class="p">);</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 输入 2</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出 21</span>
-</code></pre></div></td></tr></table></div>
-<p>我们可以利用 <code>cin.putback()</code> 帮助我们，当我们不确定是否要读入整数时，可以先读入一个字符进行检查，如果为整数，则弹回然后重新读入整数。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cin</span><span class="p">.</span><span class="n">putback</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
-<span class="w">  </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p><code>cin.get()</code> 函数可以用来读取包括空白字符在内的字符。用法为 <code>cin.get(char 变量名)</code> 或者 <code>变量名 = cin.get()</code>。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-
-<span class="c1">// 输入 2 3</span>
-<span class="c1">// 输出 2 3</span>
-</code></pre></div></td></tr></table></div>
-<p>关于 <code>cin</code> 的失效标记和 <code>while (cin &gt;&gt; )</code> 的原理，以下是 GPT-4 的回答。</p>
-<details class="gpt-4 问答">
-<summary>Gpt-4</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">while (cin &gt;&gt; x) 的原理是什么？</label><label for="__tabbed_1_2">cin 流状态是什么？</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>在 C++ 中，使用 <code>while (cin &gt;&gt; x)</code> 循环是一种常见的方式，用于连续读取输入直到遇到输入结束或错误。这个语句的工作原理基于 <code>cin</code> 的状态，具体解释如下：</p>
-<ol>
-<li>
-<p><strong>输入运算符（<code>&gt;&gt;</code>）</strong>：当 <code>cin &gt;&gt; x</code> 被执行时，C++ 尝试从标准输入（通常是键盘输入）读取数据，并将其存储在变量 <code>x</code> 中。类型必须与变量 <code>x</code> 的类型匹配，否则会导致错误。</p>
-</li>
-<li>
-<p><strong>循环条件</strong>：<code>while</code> 循环的条件是 <code>cin &gt;&gt; x</code> 的结果。在 C++ 中，<code>cin &gt;&gt; x</code> 实际上返回 <code>cin</code> 对象的引用。当输入成功时（即数据成功读入并且类型匹配），<code>cin</code> 保持在有效状态（未设置 <code>failbit</code> 或 <code>badbit</code>），并被视为一个真值。如果遇到输入错误（例如类型不匹配或输入流结束），<code>failbit</code> 或 <code>badbit</code> 将被设置，<code>cin</code> 对象会转换为假值，因此终止循环。</p>
-</li>
-<li>
-<p><strong>处理不匹配或错误</strong>：如果输入的数据与 <code>x</code> 的类型不匹配，<code>cin</code> 的状态将变为错误状态，这导致 <code>while</code> 循环终止。例如，如果期望的是一个整数，但用户输入了一些字母，<code>cin</code> 将不能将这些字母解释为整数，从而设置 <code>failbit</code>。</p>
-</li>
-<li>
-<p><strong>结束输入</strong>：在 Unix/Linux 系统中，可以通过 Ctrl+D（文件结束符 EOF）来表示输入结束，在 Windows 系统中通常使用 Ctrl+Z。这会使 <code>cin</code> 进入文件结束状态（设置 <code>eofbit</code>），同时如果没有更多的有效数据，也会设置 <code>failbit</code>，从而停止循环。</p>
-</li>
-</ol>
-<p>这种 <code>while (cin &gt;&gt; x)</code> 结构非常适合于需要多次读取同类型数据的情况，例如输入一系列数字。当数据正确输入时，循环继续；当遇到不符合要求的输入或输入结束时，循环停止，允许程序继续执行后续操作。</p>
-</div>
-<div class="tabbed-block">
-<p>在 C++ 中，<code>cin</code> 流状态指的是一个输入流的当前状态，这些状态可以帮助开发者了解是否发生了输入错误或其他类型的流问题。C++ 标准库中的输入流对象（如 <code>cin</code>）使用状态标志来表示流的当前健康状况。以下是一些常见的 <code>cin</code> 流状态标志：</p>
-<ol>
-<li>
-<p><strong>goodbit</strong>: 如果设置了 <code>goodbit</code>，表示流未发生错误，状态良好。这是默认状态，没有设置其他任何错误标志时，<code>goodbit</code> 会被设置。</p>
-</li>
-<li>
-<p><strong>eofbit</strong>: 如果在读取期间到达了输入的末尾，将设置 <code>eofbit</code>。例如，如果你尝试从文件中读取但已经达到了文件的末尾，就会发生这种情况。</p>
-</li>
-<li>
-<p><strong>failbit</strong>: 如果因为预期格式外的字符或其他原因导致输入操作失败，则会设置 <code>failbit</code>。例如，如果期望输入一个整数，但用户输入了一个字母，就会设置 <code>failbit</code>。</p>
-</li>
-<li>
-<p><strong>badbit</strong>: 如果在读写操作中发生错误，如不可恢复的流错误或设备故障，将设置 <code>badbit</code>。设置 <code>badbit</code> 通常意味着流不能继续使用。</p>
-</li>
-</ol>
-<p>你可以使用几种方法来检查这些状态标志：
-* <code>cin.good()</code> 检查 <code>goodbit</code>，如果流状态良好，即没有错误，返回 <code>true</code>。
-* <code>cin.eof()</code> 检查 <code>eofbit</code>，如果达到输入末尾，返回 <code>true</code>。
-* <code>cin.fail()</code> 检查 <code>failbit</code> 或 <code>badbit</code>，如果任一错误标志被设置，返回 <code>true</code>。
-* <code>cin.bad()</code> 检查 <code>badbit</code>，如果设置了 <code>badbit</code>，返回 <code>true</code>。</p>
-<p>这些函数允许开发者在进行进一步的输入操作之前验证流的状态，从而在处理输入时做出适当的错误处理。</p>
-</div>
-</div>
-</div>
-</details>
-<h2 id="getline">getline<a class="headerlink" href="#getline" title="Permanent link"></a></h2>
-<p>我们可以使用 <code>getline()</code> 函数按行读入一整行字符串到 <code>string</code> 变量中，用法为 <code>getline(cin, string 变量名);</code>。<code>getline()</code> 默认以换行符为分隔符。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-
-<span class="c1">// 输入 123 abc</span>
-<span class="c1">// 输出 123 abc</span>
-</code></pre></div></td></tr></table></div>
-<p>调用 <code>getline()</code> 函数会将输入缓冲区中直到第一个换行符（包括换行符）的内容全部弹出。在调用 <code>getline()</code> 函数之前，一定要保证之前的换行符一定不在输入缓冲区中。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
-<span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 <span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
-
-<span class="c1">// 输入 2，回车，程序立马结束</span>
-<span class="c1">// 应该在 cin &gt;&gt; x; 之后立马跟一个 </span>
 </code></pre></div></td></tr></table></div>
+<h2 id="运算符重载">运算符重载<a class="headerlink" href="#运算符重载" title="Permanent link"></a></h2>
+<h3 id="赋值运算符">赋值运算符<a class="headerlink" href="#赋值运算符" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 赋值</span>
+<span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">      </span><span class="c1">// 赋值</span>
+<span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">      </span><span class="c1">// 建议不要将字符数组的字符串赋值给 `string` 变量</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="关系运算符">关系运算符<a class="headerlink" href="#关系运算符" title="Permanent link"></a></h3>
+<p><code>&gt;</code>、<code>&lt;</code>、<code>&gt;=</code>、<code>&lt;=</code>、<code>==</code>、<code>!=</code>，对两个 <code>string</code> 之间进行字典序比较。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;156&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="n">string</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;45&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>时间复杂度为 <span class="arithmatex">\(O(n)\)</span>，其中 <span class="arithmatex">\(n\)</span> 为字符串的长度。</p>
+<h3 id="加法运算符">加法运算符<a class="headerlink" href="#加法运算符" title="Permanent link"></a></h3>
+<p>可以拼接两个 <code>string</code> 变量。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;456&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 123456，时间复杂度 O(n)</span>
+<span class="n">t</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">                 </span><span class="c1">// 时间复杂度 O(n)</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">      </span><span class="c1">// 456123</span>
+</code></pre></div></td></tr></table></div>
+<p>也可以在一个 <code>char</code> 和 <code>string</code> 之间进行拼接。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+<span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">;</span><span class="w">           </span><span class="c1">// 时间复杂度 O(1)</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// abcz</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">    </span><span class="c1">// zabcz，时间复杂度 O(n)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="常用成员函数">常用成员函数<a class="headerlink" href="#常用成员函数" title="Permanent link"></a></h3>
+<p>定义 <code>string s, t</code>，令他们两个字符串的长度分别为 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(m\)</span>。</p>
+<table>
+<thead>
+<tr>
+<th>成员函数</th>
+<th>功能</th>
+<th>时间复杂度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s.size(), s.length()</td>
+<td>返回 s 的长度</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>s.empty()</td>
+<td>返回 s 是否为空串</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>s.clear()</td>
+<td>清空字符串，s 变为空串</td>
+<td><span class="arithmatex">\(O(n)\)</span></td>
+</tr>
+<tr>
+<td>s.push_back(x)</td>
+<td>将字符变量 x 的内容添加到 s 的尾部</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>s.pop_back()</td>
+<td>删除 s 的最后一个字符</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>s.substr(pos)</td>
+<td>返回从 s[pos] 到 s 的最后一个字符构成的子串</td>
+<td><span class="arithmatex">\(O(len)\)</span>，<span class="arithmatex">\(len\)</span> 为子串长度</td>
+</tr>
+<tr>
+<td>s.substr(pos, len)</td>
+<td>返回从 s[pos] 开始的长度为 len 的子串</td>
+<td><span class="arithmatex">\(O(len)\)</span>，<span class="arithmatex">\(len\)</span> 为子串长度</td>
+</tr>
+<tr>
+<td>s.insert(pos, t)</td>
+<td>在 s[pos] 之前插入字符串 t</td>
+<td><span class="arithmatex">\(O(n + m)\)</span></td>
+</tr>
+<tr>
+<td>s.find(t)</td>
+<td>查找 t 在 s 中作为子串的第一次出现的位置</td>
+<td>最好 <span class="arithmatex">\(O(m)\)</span>，最坏 <span class="arithmatex">\(O(nm)\)</span></td>
+</tr>
+<tr>
+<td>s.find(t, pos)</td>
+<td>查找 t 在 s[pos] 及之后作为子串的第一次出现的位置</td>
+<td>最好 <span class="arithmatex">\(O(m)\)</span>，最坏 <span class="arithmatex">\(O(nm)\)</span></td>
+</tr>
+<tr>
+<td>s.erase(pos, len)</td>
+<td>删除从 s[pos] 开始的连续的 len 个字符</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+<p>对于 <code>.find()</code>，如果查找不到相应子串，返回常量 <code>string::npos</code>，将其强制转化为 <code>int</code> 类型后结果为 <code>-1</code>。</p>
+<p>对于 <code>.substr(pos, len)</code>，如果所求的子串长度已经超出最后一个字符，即 <span class="arithmatex">\(pos + len \ge n\)</span>，则其等同于 <code>.substr(pos)</code>；如果 <span class="arithmatex">\(pos \ge n\)</span>，报 <code>RE</code> 错误。</p>
+<p>一般来说，<code>.insert()</code>、<code>.erase()</code>、<code>.find()</code>、<code>.substr()</code> 在信息学中不常用，因为在给定数据规模下很有可能超时，但必须掌握，可以用来写超时暴力。</p>
 
 
 
