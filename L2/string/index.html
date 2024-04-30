@@ -502,6 +502,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sort-和-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      sort 和 reverse()
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -817,6 +826,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sort-和-reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      sort 和 reverse()
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -978,13 +996,27 @@
 <tr>
 <td>s.erase(pos, len)</td>
 <td>删除从 s[pos] 开始的连续的 len 个字符</td>
-<td>O(n)</td>
+<td><span class="arithmatex">\(O(n)\)</span></td>
+</tr>
+<tr>
+<td>s.begin()</td>
+<td>返回指向 s[0] 的迭代器</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>s.end()</td>
+<td>返回指向 s 尾部占位符的迭代器</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
 </tr>
 </tbody>
 </table>
 <p>对于 <code>.find()</code>，如果查找不到相应子串，返回常量 <code>string::npos</code>，将其强制转化为 <code>int</code> 类型后结果为 <code>-1</code>。</p>
 <p>对于 <code>.substr(pos, len)</code>，如果所求的子串长度已经超出最后一个字符，即 <span class="arithmatex">\(pos + len \ge n\)</span>，则其等同于 <code>.substr(pos)</code>；如果 <span class="arithmatex">\(pos \ge n\)</span>，报 <code>RE</code> 错误。</p>
 <p>一般来说，<code>.insert()</code>、<code>.erase()</code>、<code>.find()</code>、<code>.substr()</code> 在信息学中不常用，因为在给定数据规模下很有可能超时，但必须掌握，可以用来写超时暴力。</p>
+<h3 id="sort-和-reverse">sort 和 reverse()<a class="headerlink" href="#sort-和-reverse" title="Permanent link"></a></h3>
+<p>对于 <code>s.begin()</code> 和 <code>s.end()</code>；<code>s.end()</code> 可以在逻辑上理解为指向 s 最后一个字符的后一个位置的迭代器。</p>
+<p>对字符串 <code>s</code> 中的内容进行排序可以使用 <code>sort(s.begin(), s.end())</code>，时间复杂度 <span class="arithmatex">\(O(n \log n)\)</span>。</p>
+<p>将字符串 <code>s</code> 中的内容进行翻转可以使用 <code>reverse(s.begin(), s.end())</code>，时间复杂度 <span class="arithmatex">\(O(n)\)</span>。</p>
 
 
 
