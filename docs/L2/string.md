@@ -93,10 +93,20 @@ cout << 'z' + s;    // zabcz，时间复杂度 O(n)
 | s.insert(pos, t)     | 在 s[pos] 之前插入字符串 t                        | $O(n + m)$                 |
 | s.find(t)            | 查找 t 在 s 中作为子串的第一次出现的位置          | 最好 $O(m)$，最坏 $O(nm)$  |
 | s.find(t, pos)       | 查找 t 在 s[pos] 及之后作为子串的第一次出现的位置 | 最好 $O(m)$，最坏 $O(nm)$  |
-| s.erase(pos, len)    | 删除从 s[pos] 开始的连续的 len 个字符             | O(n)                       |
+| s.erase(pos, len)    | 删除从 s[pos] 开始的连续的 len 个字符             | $O(n)$                     |
+| s.begin()            | 返回指向 s[0] 的迭代器                            | $O(1)$                     |
+| s.end()              | 返回指向 s 尾部占位符的迭代器                     | $O(1)$                     |
 
 对于 `.find()`，如果查找不到相应子串，返回常量 `string::npos`，将其强制转化为 `int` 类型后结果为 `-1`。
 
 对于 `.substr(pos, len)`，如果所求的子串长度已经超出最后一个字符，即 $pos + len \ge n$，则其等同于 `.substr(pos)`；如果 $pos \ge n$，报 `RE` 错误。
 
 一般来说，`.insert()`、`.erase()`、`.find()`、`.substr()` 在信息学中不常用，因为在给定数据规模下很有可能超时，但必须掌握，可以用来写超时暴力。
+
+### sort 和 reverse()
+
+对于 `s.begin()` 和 `s.end()`；`s.end()` 可以在逻辑上理解为指向 s 最后一个字符的后一个位置的迭代器。
+
+对字符串 `s` 中的内容进行排序可以使用 `sort(s.begin(), s.end())`，时间复杂度 $O(n \log n)$。
+
+将字符串 `s` 中的内容进行翻转可以使用 `reverse(s.begin(), s.end())`，时间复杂度 $O(n)$。
