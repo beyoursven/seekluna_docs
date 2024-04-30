@@ -15,6 +15,7 @@ copyright: 'Copyright &copy; 2019 - 2024 Seekluna Team'
 nav:
   - L2-入门:
     - 输入技巧: L2/io_technique.md
+    - string: L2/string.md
   - data structure:
     - stack: ds/stack.md
   - 动态规划:
