@@ -19,6 +19,9 @@ nav:
         - 概念: CSPS/ds/heap/二叉堆.md
         - 应用: CSPS/ds/heap/应用.md
         - 其他: CSPS/ds/heap/其他.md
+    - STL:
+      - 容器:
+        - 优先队列: STL/pq.md
   - L2-入门:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
@@ -29,6 +32,7 @@ nav:
     - 记忆化: dp/memorization.md
     - 单序列 dp: dp/sequence_dp.md
     - 多序列 dp: dp/multi_sequence_dp.md
+    - 矩阵 dp: dp/matrix_dp.md
 
 
 # Theme
