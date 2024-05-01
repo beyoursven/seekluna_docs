@@ -10,11 +10,9 @@
         <meta name="author" content="Seekluna">
       
       
-        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/CSPS/ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/">
+        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/CSPS/STL/%E5%AE%B9%E5%99%A8/pq/">
       
       
-      
-        <link rel="next" href="../%E5%BA%94%E7%94%A8/">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>概念 - Seekluna</title>
+        <title>priority_queue - Seekluna</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#二叉堆" class="md-skip">
+        <a href="#priority_queue" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概念
+              priority_queue
             
           </span>
         </div>
@@ -213,7 +211,11 @@
         
   
   
+  
     
+    
+      
+  
   
   
     
@@ -221,21 +223,11 @@
       
   
   
-    
-  
   
     
     
-      
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-tabs__link">
           
   
   CSPS
@@ -355,28 +347,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -387,7 +374,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             CSPS
@@ -398,8 +385,6 @@
                 
   
   
-    
-  
   
   
     
@@ -409,11 +394,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -427,7 +412,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             数据结构
@@ -438,8 +423,6 @@
                 
   
   
-    
-  
   
   
     
@@ -449,11 +432,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_1" >
         
           
           <label class="md-nav__link" for="__nav_1_1_1" id="__nav_1_1_1_label" tabindex="0">
@@ -467,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1_1">
             <span class="md-nav__icon md-icon"></span>
             二叉堆
@@ -478,30 +461,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    概念
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,113 +473,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#完全二叉树的存储" class="md-nav__link">
-    <span class="md-ellipsis">
-      完全二叉树的存储
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#堆" class="md-nav__link">
-    <span class="md-ellipsis">
-      堆
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#基本操作" class="md-nav__link">
-    <span class="md-ellipsis">
-      基本操作
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="基本操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#上浮" class="md-nav__link">
-    <span class="md-ellipsis">
-      上浮
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#下沉" class="md-nav__link">
-    <span class="md-ellipsis">
-      下沉
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#查找最小值" class="md-nav__link">
-    <span class="md-ellipsis">
-      查找最小值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#插入元素" class="md-nav__link">
-    <span class="md-ellipsis">
-      插入元素
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#删除最小值" class="md-nav__link">
-    <span class="md-ellipsis">
-      删除最小值
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#用类来实现堆" class="md-nav__link">
-    <span class="md-ellipsis">
-      用类来实现堆
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -629,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%BA%94%E7%94%A8/" class="md-nav__link">
+      <a href="../../../ds/heap/%E5%BA%94%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%85%B6%E4%BB%96/" class="md-nav__link">
+      <a href="../../../ds/heap/%E5%85%B6%E4%BB%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,73 +986,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#完全二叉树的存储" class="md-nav__link">
+  <a href="#头文件" class="md-nav__link">
     <span class="md-ellipsis">
-      完全二叉树的存储
+      头文件
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#堆" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
-      堆
+      定义
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#基本操作" class="md-nav__link">
+  <a href="#成员函数" class="md-nav__link">
     <span class="md-ellipsis">
-      基本操作
+      成员函数
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="基本操作">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自定义比较器" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义比较器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自定义比较器">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#上浮" class="md-nav__link">
+  <a href="#方法-1定义比较器函数对象" class="md-nav__link">
     <span class="md-ellipsis">
-      上浮
+      方法 1：定义比较器函数对象
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#下沉" class="md-nav__link">
+  <a href="#方法-2重载运算符" class="md-nav__link">
     <span class="md-ellipsis">
-      下沉
+      方法 2：重载运算符
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#查找最小值" class="md-nav__link">
+  <a href="#方法-3使用-lamda-表达式c11" class="md-nav__link">
     <span class="md-ellipsis">
-      查找最小值
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#插入元素" class="md-nav__link">
-    <span class="md-ellipsis">
-      插入元素
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#删除最小值" class="md-nav__link">
-    <span class="md-ellipsis">
-      删除最小值
+      方法 3：使用 lamda 表达式（C++11）
     </span>
   </a>
   
@@ -1208,11 +1055,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#用类来实现堆" class="md-nav__link">
+  <a href="#例子" class="md-nav__link">
     <span class="md-ellipsis">
-      用类来实现堆
+      例子
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#结构体" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构体
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1231,7 +1093,7 @@
                   
 
   
-    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/CSPS/ds/heap/二叉堆.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/CSPS/STL/容器/pq.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1239,63 +1101,109 @@
   
 
 
-<h1 id="二叉堆">二叉堆<a class="headerlink" href="#二叉堆" title="Permanent link"></a></h1>
-<h2 id="完全二叉树的存储">完全二叉树的存储<a class="headerlink" href="#完全二叉树的存储" title="Permanent link"></a></h2>
-<p>可以使用数组模拟链表的方式（记录左右儿子编号）来实现完全二叉树的存储。</p>
+<h1 id="priority_queue">priority_queue<a class="headerlink" href="#priority_queue" title="Permanent link"></a></h1>
+<p>优先队列，C++ 已经封装好的堆。比赛中常用优先队列代替堆的实现。</p>
+<h2 id="头文件">头文件<a class="headerlink" href="#头文件" title="Permanent link"></a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;queue&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;queue&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
+
+<span class="c1">// 定义时需要三个参数：数据类型为 TypeName，底层容器为 Container，比较器函数对象为 Compare</span>
+<span class="c1">// 不指定 Container 和 Compare 时，默认底层容器为 vector，默认比较器规则为 less&lt;TypeName&gt;</span>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">TypeName</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">Container</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">Compare</span><span class="p">]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span>
+
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 默认为大根堆</span>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">pq3</span><span class="p">;</span><span class="w">  </span><span class="c1">// 小根堆，需要引入头文件 &lt;functional&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="成员函数">成员函数<a class="headerlink" href="#成员函数" title="Permanent link"></a></h2>
+<p><span class="arithmatex">\(O(1)\)</span> 时间复杂度：</p>
+<ul>
+<li><code>top()</code> 访问堆顶元素（优先队列不能为空）</li>
+<li><code>empty()</code> 判断容器是否为空</li>
+<li><code>size()</code> 查询元素数量</li>
+</ul>
+<p><span class="arithmatex">\(O(\log n)\)</span> 时间复杂度：</p>
+<ul>
+<li><code>push(x)</code> 插入元素</li>
+<li><code>pop()</code> 删除堆顶元素（优先队列不能为空）</li>
+</ul>
+<p>无 <code>clear()</code>，清空可以在局部定义容器，或者不断 <code>pop()</code>。</p>
+<h2 id="自定义比较器">自定义比较器<a class="headerlink" href="#自定义比较器" title="Permanent link"></a></h2>
+<p>对于结构体类型，我们需要定义其比较规则才能用优先队列维护该类型元素。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w">  </span><span class="c1">// 左右儿子编号</span>
-<span class="p">}</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="p">};</span>
 </code></pre></div></td></tr></table></div>
-<p>实际上可以按顺序给完全二叉树编号，此时编号为 <span class="arithmatex">\(i\)</span> 的结点的左儿子、右儿子、父亲编号为 <span class="arithmatex">\(2i, 2i+1,\lfloor \frac{i}{2} \rfloor\)</span>。这种存储方式又被称为<strong>堆式存储</strong>。</p>
-<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-1.jpg" /></p>
-<h2 id="堆">堆<a class="headerlink" href="#堆" title="Permanent link"></a></h2>
-<p>堆是一种支持动态快速查询最值的数据结构，支持以下几种操作：</p>
-<ul>
-<li>高效插入元素。</li>
-<li>高效查询、删除最值。</li>
-<li>高效修改指定元素、删除指定元素.</li>
-</ul>
-<p>二叉堆（简称堆）是一棵完全二叉树，它具有如下性质：</p>
-<ul>
-<li>对于<strong>小根堆</strong>（<strong>大根堆</strong>）而言，父结点的值不大于（不小于）两个儿子的值。</li>
-</ul>
-<p>堆的根又被称为堆顶，小根堆的堆顶元素是堆中最小的元素（如何证明？）。</p>
-<p>可以使用数组直接存储堆。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// 数组存储堆，堆的大小，堆中的编号从 1 开始</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-2.jpg" /></p>
-<h2 id="基本操作">基本操作<a class="headerlink" href="#基本操作" title="Permanent link"></a></h2>
-<p>当对堆进行增删改查的操作时，可能会破坏堆的性质，也可能会让堆不再是完全二叉树，需要考虑如何维护。</p>
-<p>下文先介绍两种基本操作：上浮和下沉。这两种操作用来保证堆的性质。本文讲解均以小根堆为例。</p>
-<h3 id="上浮">上浮<a class="headerlink" href="#上浮" title="Permanent link"></a></h3>
-<p>当你修改堆中某元素让其变小时：</p>
-<ul>
-<li>如果元素有父亲，并且值比父亲更小，交换元素，然后继续执行该操作。</li>
-<li>否则，停止上浮。</li>
-</ul>
-<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-3.jpg" /></p>
+<h3 id="方法-1定义比较器函数对象">方法 1：定义比较器函数对象<a class="headerlink" href="#方法-1定义比较器函数对象" title="Permanent link"></a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 让堆中编号为 x 的结点上浮</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Up</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// j 为父亲编号</span>
-<span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 最一般的写法</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cmp</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 函数尾的 const 修饰符表示该函数不能对所在类的成员进行修改</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span><span class="w">  </span><span class="c1">// 定义了一个 x 为关键字的大根堆</span>
 </code></pre></div></td></tr></table></div>
-<p>时间复杂度 <span class="arithmatex">\(O(\log n)\)</span>。</p>
-<h3 id="下沉">下沉<a class="headerlink" href="#下沉" title="Permanent link"></a></h3>
-<p>当你修改堆中某元素让其变大时：</p>
-<ul>
-<li>如果当前元素不是叶子，并且大于较小的儿子时，交换，然后继续执行该操作。</li>
-<li>否则，停止下沉。</li>
-</ul>
-<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-4.jpg" /></p>
+<h3 id="方法-2重载运算符">方法 2：重载运算符<a class="headerlink" href="#方法-2重载运算符" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span><span class="w">  </span><span class="c1">// 定义了一个 x 为关键字的小根堆</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span><span class="w">  </span><span class="c1">// 定义了一个 x 为关键字的小根堆</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="方法-3使用-lamda-表达式c11">方法 3：使用 lamda 表达式（C++11）<a class="headerlink" href="#方法-3使用-lamda-表达式c11" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">cmp</span><span class="p">))</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span><span class="w"> </span><span class="c1">// x 为关键字的大根堆</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="例子">例子<a class="headerlink" href="#例子" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1307,58 +1215,36 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 获取较小儿子编号</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">Son</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-
-<span class="c1">// 让堆中编号为 x 的结点下沉</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Down</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Son</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Son</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// j 为较小儿子编号</span>
-<span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">cmp</span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 默认为大根堆</span>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 特别注意比较器的实现，跟 sort 比较器反着来</span>
+
+<span class="n">pq1</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">pq1</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pq1</span><span class="p">.</span><span class="n">top</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 2</span>
+<span class="n">pq1</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pq1</span><span class="p">.</span><span class="n">top</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1</span>
+
+<span class="n">pq2</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">pq2</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pq2</span><span class="p">.</span><span class="n">top</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1</span>
+<span class="n">pq2</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pq2</span><span class="p">.</span><span class="n">top</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 2</span>
 </code></pre></div></td></tr></table></div>
-<p>时间复杂度 <span class="arithmatex">\(O(\log n)\)</span>。</p>
-<h3 id="查找最小值">查找最小值<a class="headerlink" href="#查找最小值" title="Permanent link"></a></h3>
-<p>即堆顶。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">Top</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>时间复杂度 <span class="arithmatex">\(O(1)\)</span>。</p>
-<h3 id="插入元素">插入元素<a class="headerlink" href="#插入元素" title="Permanent link"></a></h3>
-<p>我们可以在完全二叉树的最后一个叶结点右边（即，堆的尾部）增加一个结点，保证堆仍然是一棵完全二叉树。</p>
-<p>之后需要上浮来维护堆的性质。</p>
-<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-6.jpg" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Push</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">  </span><span class="n">Up</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>时间复杂度 <span class="arithmatex">\(O(\log n)\)</span>。</p>
-<h3 id="删除最小值">删除最小值<a class="headerlink" href="#删除最小值" title="Permanent link"></a></h3>
-<p>如果直接删除堆顶，会使堆分裂为两个堆，而删除堆尾元素不需要维护。</p>
-<p>我们可以将堆顶和堆尾元素进行交换，然后删除堆尾元素，保证堆仍然是一棵完全二叉树。</p>
-<p>如果交换后的堆顶不满足堆的性质，需要进行下沉。</p>
-<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-5.jpg" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">--</span><span class="p">]);</span>
-<span class="w">  </span><span class="n">Down</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>时间复杂度 <span class="arithmatex">\(O(\log n)\)</span>。</p>
-<h2 id="用类来实现堆">用类来实现堆<a class="headerlink" href="#用类来实现堆" title="Permanent link"></a></h2>
-<p>对于比较复杂的数据结构，可以将其所存储的元素、属性、操作全部封装起来，使代码变得更具有逻辑。</p>
+<h3 id="结构体">结构体<a class="headerlink" href="#结构体" title="Permanent link"></a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1390,38 +1276,38 @@
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Heap</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">  </span><span class="c1">// 语数外</span>
+<span class="p">};</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">Up</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cmp</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">operator</span><span class="p">()(</span><span class="k">const</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">a</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">Son</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">Down</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Son</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">b</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">c</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">Push</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Up</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Student</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">cmp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span><span class="w">  </span><span class="c1">// 按语数外从高到低排</span>
 
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">Pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">--</span><span class="p">]);</span>
-<span class="w">    </span><span class="n">Down</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">});</span>
+<span class="w">  </span><span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
+<span class="w">  </span><span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
+<span class="w">  </span><span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pq</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Student</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+<span class="w">    </span><span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">Top</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span><span class="w"> </span><span class="n">h</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
 
