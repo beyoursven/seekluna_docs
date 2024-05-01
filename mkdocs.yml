@@ -16,7 +16,6 @@ nav:
   - CSPS: 
     - 数据结构:
       - 二叉堆: CSPS/ds/heap/二叉堆.md
-      - 应用: CSPS/ds/heap/应用.md
   - L2-入门:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
