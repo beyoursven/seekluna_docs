@@ -643,6 +643,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其他
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1110,7 +1131,7 @@
 <p>可以使用数组直接存储堆。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// 数组存储堆，堆的大小，堆中的编号从 1 开始</span>
 </code></pre></div></td></tr></table></div>
-<p><img src="二叉堆-2.jpg" style="zoom:25%;" /></p>
+<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-2.jpg" /></p>
 <h2 id="基本操作">基本操作<a class="headerlink" href="#基本操作" title="Permanent link"></a></h2>
 <p>当对堆进行增删改查的操作时，可能会破坏堆的性质，也可能会让堆不再是完全二叉树，需要考虑如何维护。</p>
 <p>下文先介绍两种基本操作：上浮和下沉。这两种操作用来保证堆的性质。本文讲解均以小根堆为例。</p>
@@ -1120,7 +1141,7 @@
 <li>如果元素有父亲，并且值比父亲更小，交换元素，然后继续执行该操作。</li>
 <li>否则，停止上浮。</li>
 </ul>
-<p><img src="二叉堆-3.jpg" style="zoom:25%;" /></p>
+<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-3.jpg" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1140,7 +1161,7 @@
 <li>如果当前元素不是叶子，并且大于较小的儿子时，交换，然后继续执行该操作。</li>
 <li>否则，停止下沉。</li>
 </ul>
-<p><img src="二叉堆-4.jpg" style="zoom:25%;" /></p>
+<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-4.jpg" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1178,7 +1199,7 @@
 <h3 id="插入元素">插入元素<a class="headerlink" href="#插入元素" title="Permanent link"></a></h3>
 <p>我们可以在完全二叉树的最后一个叶结点右边（即，堆的尾部）增加一个结点，保证堆仍然是一棵完全二叉树。</p>
 <p>之后需要上浮来维护堆的性质。</p>
-<p><img src="二叉堆-6.jpg" style="zoom:25%;" /></p>
+<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-6.jpg" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1192,7 +1213,7 @@
 <p>如果直接删除堆顶，会使堆分裂为两个堆，而删除堆尾元素不需要维护。</p>
 <p>我们可以将堆顶和堆尾元素进行交换，然后删除堆尾元素，保证堆仍然是一棵完全二叉树。</p>
 <p>如果交换后的堆顶不满足堆的性质，需要进行下沉。</p>
-<p><img src="二叉堆-5.jpg" style="zoom:25%;" /></p>
+<p><img alt="" src="../%E4%BA%8C%E5%8F%89%E5%A0%86-5.jpg" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
