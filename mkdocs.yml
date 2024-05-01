@@ -18,6 +18,7 @@ nav:
       - 二叉堆: 
         - 概念: CSPS/ds/heap/二叉堆.md
         - 应用: CSPS/ds/heap/应用.md
+        - 其他: CSPS/ds/heap/其他.md
   - L2-入门:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
