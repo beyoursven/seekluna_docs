@@ -21,7 +21,7 @@ nav:
         - 其他: CSPS/ds/heap/其他.md
     - STL:
       - 容器:
-        - 优先队列: STL/容器/pq.md
+        - 优先队列: CSPS/STL/容器/pq.md
   - L2-入门:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
