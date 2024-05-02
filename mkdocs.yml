@@ -22,6 +22,10 @@ nav:
     - STL:
       - 容器:
         - 优先队列: CSPS/STL/容器/pq.md
+        - set: CSPS/STL/容器/set.md
+        - multiset: CSPS/STL/容器/multiset.md
+        - map: CSPS/STL/容器/map.md
+        - 参考资料: CSPS/STL/容器/reference.md
   - L2-入门:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
