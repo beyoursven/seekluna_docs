@@ -10,28 +10,28 @@
         <meta name="author" content="Seekluna">
       
       
-        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/dp/theory/">
+        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/CSPS/STL/%E5%AE%B9%E5%99%A8/multiset/">
       
       
-        <link rel="prev" href="../../ds/stack/">
+        <link rel="prev" href="../set/">
       
       
-        <link rel="next" href="../memorization/">
+        <link rel="next" href="../map/">
       
       
-      <link rel="icon" href="../../favicon.ico">
+      <link rel="icon" href="../../../../favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
-        <title>理论 - Seekluna</title>
+        <title>multiset - Seekluna</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dp-理论" class="md-skip">
+        <a href="#multiset" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Seekluna" class="md-header__button md-logo" aria-label="Seekluna" data-md-component="logo">
+    <a href="../../../.." title="Seekluna" class="md-header__button md-logo" aria-label="Seekluna" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              理论
+              multiset
             
           </span>
         </div>
@@ -215,23 +215,29 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../CSPS/ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-tabs__link">
           
   
   CSPS
@@ -255,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../L2/io_technique/" class="md-tabs__link">
+        <a href="../../../../L2/io_technique/" class="md-tabs__link">
           
   
   L2-入门
@@ -273,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ds/stack/" class="md-tabs__link">
+        <a href="../../../../ds/stack/" class="md-tabs__link">
           
   
   data structure
@@ -287,13 +293,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../dp/theory/" class="md-tabs__link">
           
   
   动态规划
@@ -326,7 +330,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Seekluna" class="md-nav__button md-logo" aria-label="Seekluna" data-md-component="logo">
+    <a href="../../../.." title="Seekluna" class="md-nav__button md-logo" aria-label="Seekluna" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
@@ -353,23 +357,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -380,7 +389,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             CSPS
@@ -470,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-nav__link">
+      <a href="../../../ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/ds/heap/%E5%BA%94%E7%94%A8/" class="md-nav__link">
+      <a href="../../../ds/heap/%E5%BA%94%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/ds/heap/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+      <a href="../../../ds/heap/%E5%85%B6%E4%BB%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,6 +555,8 @@
                 
   
   
+    
+  
   
   
     
@@ -555,11 +566,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -573,7 +584,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             STL
@@ -584,6 +595,8 @@
                 
   
   
+    
+  
   
   
     
@@ -593,11 +606,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1_2_1" id="__nav_1_2_1_label" tabindex="0">
@@ -611,7 +624,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_2_1">
             <span class="md-nav__icon md-icon"></span>
             容器
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/pq/" class="md-nav__link">
+      <a href="../pq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/set/" class="md-nav__link">
+      <a href="../set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -664,10 +677,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/multiset/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -676,6 +698,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -688,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/map/" class="md-nav__link">
+      <a href="../map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/reference/" class="md-nav__link">
+      <a href="../reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../L2/io_technique/" class="md-nav__link">
+      <a href="../../../../L2/io_technique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../L2/string/" class="md-nav__link">
+      <a href="../../../../L2/string/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/stack/" class="md-nav__link">
+      <a href="../../../../ds/stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,28 +926,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -935,7 +953,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             动态规划
@@ -946,19 +964,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../dp/theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +976,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -980,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memorization/" class="md-nav__link">
+      <a href="../../../../dp/memorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sequence_dp/" class="md-nav__link">
+      <a href="../../../../dp/sequence_dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi_sequence_dp/" class="md-nav__link">
+      <a href="../../../../dp/multi_sequence_dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../matrix_dp/" class="md-nav__link">
+      <a href="../../../../dp/matrix_dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1105,7 @@
                   
 
   
-    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/dp/theory.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/CSPS/STL/容器/multiset.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1105,15 +1113,44 @@
   
 
 
-<h1 id="dp-理论">DP 理论<a class="headerlink" href="#dp-理论" title="Permanent link"></a></h1>
-<p>实现 DP 的几个步骤：</p>
-<ol>
-<li>读题，将题意表达为数学形式，在此形式中寻找状态、转移、拓扑序、最优化属性。</li>
-<li>推不出状态时可以先尝试实现搜索。</li>
-<li>边界：初始状态是哪些？目标状态是哪些？状态初始化为什么值？转移中是否可能出现数组越界、数据溢出？</li>
-<li>优化状态设计：降维、改变最优化属性等</li>
-<li>优化转移：数据结构优化（前缀和，单调队列，单调栈，线段树等），决策单调性（斜率优化，四边形不等式）、根号算法等数学类优化。</li>
-</ol>
+<h1 id="multiset">multiset<a class="headerlink" href="#multiset" title="Permanent link"></a></h1>
+<p>多重集合，头文件、定义、初始化、绝大部分操作和成员与 <code>set</code> 一致，有几个特殊点需要记住。</p>
+<p>令 <span class="arithmatex">\(N\)</span> 为多重集容器大小，<span class="arithmatex">\(x\)</span> 为容器中的一个元素，<code>multiset&lt;int&gt; s</code>，令 <span class="arithmatex">\(M\)</span> 为 <span class="arithmatex">\(x\)</span> 在多重集中出现的次数。</p>
+<ul>
+<li><code>s.count(x)</code>，返回 <span class="arithmatex">\(x\)</span> 在多重集中的出现次数，<span class="arithmatex">\(O(\log N + M)\)</span></li>
+<li><code>s.erase(x)</code>，删除多重集容器内<strong>所有</strong>值为 <span class="arithmatex">\(x\)</span> 的元素，<span class="arithmatex">\(O(\log N + M)\)</span></li>
+<li>如果只想查找是否存在元素 <span class="arithmatex">\(x\)</span>、删除一个值为 <span class="arithmatex">\(x\)</span> 的元素，使用 <code>s.find(x) != s.end()</code> 和 <code>auto it = s.find(x); if (it != s.end()) s.erase(it)</code>。直接删除尾迭代器报错。</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// multiset 的 erase 操作</span>
+<span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ms</span><span class="p">;</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1]</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">14</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 14]</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 9, 14]</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 9, 14]</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 9, 9, 14]</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 9, 9, 9, 14]</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ms</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ms</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ms</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">9</span><span class="p">));</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ms</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2</span>
+<span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ms</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -1164,12 +1201,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "navigation.tabs", "navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.edit", "navigation.tabs", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
