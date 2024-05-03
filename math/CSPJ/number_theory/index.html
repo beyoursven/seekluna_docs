@@ -1,0 +1,2146 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Seekluna">
+      
+      
+        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/math/CSPJ/number_theory/">
+      
+      
+        <link rel="prev" href="../../../L2/string/">
+      
+      
+        <link rel="next" href="../number_theory_problem/">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+    
+    
+      
+        <title>数论 - Seekluna</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#数论" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Seekluna" class="md-header__button md-logo" aria-label="Seekluna" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Seekluna
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数论
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/beyoursven/seekluna_docs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    seekluna_docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CSPS/" class="md-tabs__link">
+          
+  
+  CSPS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../L2/io_technique/" class="md-tabs__link">
+          
+  
+  L2-入门
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../notation.md" class="md-tabs__link">
+          
+  
+  数学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ds/stack/" class="md-tabs__link">
+          
+  
+  data structure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../dp/theory/" class="md-tabs__link">
+          
+  
+  动态规划
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Seekluna" class="md-nav__button md-logo" aria-label="Seekluna" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+
+    </a>
+    Seekluna
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/beyoursven/seekluna_docs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    seekluna_docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSPS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            CSPS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_1" id="__nav_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    二叉堆
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            二叉堆
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/ds/heap/%E5%BA%94%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    应用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/ds/heap/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其他
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    STL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            STL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    容器
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            容器
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/pq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    优先队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/multiset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multiset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    L2-入门
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            L2-入门
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../L2/io_technique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    输入技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../L2/string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    string
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notation.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学符号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSPJ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSPJ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数论
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    数论
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#约数和倍数" class="md-nav__link">
+    <span class="md-ellipsis">
+      约数和倍数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="约数和倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#枚举约数约数法" class="md-nav__link">
+    <span class="md-ellipsis">
+      枚举约数（约数法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#枚举倍数倍数法" class="md-nav__link">
+    <span class="md-ellipsis">
+      枚举倍数（倍数法）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#质数与合数" class="md-nav__link">
+    <span class="md-ellipsis">
+      质数与合数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="质数与合数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#质数判定" class="md-nav__link">
+    <span class="md-ellipsis">
+      质数判定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#质数筛" class="md-nav__link">
+    <span class="md-ellipsis">
+      质数筛
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="质数筛">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#埃氏筛" class="md-nav__link">
+    <span class="md-ellipsis">
+      埃氏筛
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#欧拉筛线性筛" class="md-nav__link">
+    <span class="md-ellipsis">
+      欧拉筛（线性筛）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#最大公约数和最小公倍数" class="md-nav__link">
+    <span class="md-ellipsis">
+      最大公约数和最小公倍数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最大公约数和最小公倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#欧几里得算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      欧几里得算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#算数基本定理唯一分解定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      算数基本定理（唯一分解定理）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="算数基本定理（唯一分解定理）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#质因数分解" class="md-nav__link">
+    <span class="md-ellipsis">
+      质因数分解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="质因数分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#试除法分解质因数" class="md-nav__link">
+    <span class="md-ellipsis">
+      试除法分解质因数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#最小质因数分解质因数" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小质因数分解质因数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#质因数分解与约数" class="md-nav__link">
+    <span class="md-ellipsis">
+      质因数分解与约数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#质因数分解与公约数公倍数" class="md-nav__link">
+    <span class="md-ellipsis">
+      质因数分解与公约数公倍数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number_theory_problem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数论习题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    data structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            data structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ds/stack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    动态规划
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            动态规划
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dp/theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dp/memorization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    记忆化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dp/sequence_dp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    单序列 dp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dp/multi_sequence_dp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多序列 dp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dp/matrix_dp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    矩阵 dp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#约数和倍数" class="md-nav__link">
+    <span class="md-ellipsis">
+      约数和倍数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="约数和倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#枚举约数约数法" class="md-nav__link">
+    <span class="md-ellipsis">
+      枚举约数（约数法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#枚举倍数倍数法" class="md-nav__link">
+    <span class="md-ellipsis">
+      枚举倍数（倍数法）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#质数与合数" class="md-nav__link">
+    <span class="md-ellipsis">
+      质数与合数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="质数与合数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#质数判定" class="md-nav__link">
+    <span class="md-ellipsis">
+      质数判定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#质数筛" class="md-nav__link">
+    <span class="md-ellipsis">
+      质数筛
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="质数筛">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#埃氏筛" class="md-nav__link">
+    <span class="md-ellipsis">
+      埃氏筛
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#欧拉筛线性筛" class="md-nav__link">
+    <span class="md-ellipsis">
+      欧拉筛（线性筛）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#最大公约数和最小公倍数" class="md-nav__link">
+    <span class="md-ellipsis">
+      最大公约数和最小公倍数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最大公约数和最小公倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#欧几里得算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      欧几里得算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#算数基本定理唯一分解定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      算数基本定理（唯一分解定理）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="算数基本定理（唯一分解定理）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#质因数分解" class="md-nav__link">
+    <span class="md-ellipsis">
+      质因数分解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="质因数分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#试除法分解质因数" class="md-nav__link">
+    <span class="md-ellipsis">
+      试除法分解质因数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#最小质因数分解质因数" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小质因数分解质因数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#质因数分解与约数" class="md-nav__link">
+    <span class="md-ellipsis">
+      质因数分解与约数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#质因数分解与公约数公倍数" class="md-nav__link">
+    <span class="md-ellipsis">
+      质因数分解与公约数公倍数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/math/CSPJ/number_theory.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="数论">数论<a class="headerlink" href="#数论" title="Permanent link"></a></h1>
+<p>关于数论部分的概念，可参考如下链接：</p>
+<p><a href="https://oi-wiki.org/math/number-theory/basic/">OI-Wiki 数论基础</a></p>
+<h2 id="约数和倍数">约数和倍数<a class="headerlink" href="#约数和倍数" title="Permanent link"></a></h2>
+<p>约数总是成对出现的：</p>
+<ul>
+<li>如果 <span class="arithmatex">\(a\)</span> 是 <span class="arithmatex">\(n\)</span> 的约数，那么 <span class="arithmatex">\(\frac{n}{a}\)</span> 也是 <span class="arithmatex">\(n\)</span> 的约数。</li>
+<li>这一对约数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(\frac{n}{a}\)</span>，一个小于等于 <span class="arithmatex">\(\sqrt{n}\)</span>，另一个大于等于 <span class="arithmatex">\(\sqrt{n}\)</span>。</li>
+<li>
+<p>令 <span class="arithmatex">\(n\)</span> 有一对约数 <span class="arithmatex">\(pq = n\)</span>，不妨设 <span class="arithmatex">\(p \le q\)</span>，<span class="arithmatex">\(n = pq \ge p^2\)</span>，<span class="arithmatex">\(p \le \sqrt n\)</span>。</p>
+</li>
+<li>
+<p>如果 <span class="arithmatex">\(a\)</span> 等于 <span class="arithmatex">\(\frac{n}{a}\)</span>，那么 <span class="arithmatex">\(n\)</span> 是一个完全平方数。</p>
+</li>
+</ul>
+<p>推论：<span class="arithmatex">\(n\)</span> 的约数数量为奇数，等价于 <span class="arithmatex">\(n\)</span> 为完全平方数。</p>
+<h3 id="枚举约数约数法">枚举约数（约数法）<a class="headerlink" href="#枚举约数约数法" title="Permanent link"></a></h3>
+<p>给定 <span class="arithmatex">\(n\)</span>，求 <span class="arithmatex">\(n\)</span> 的每个约数，<span class="arithmatex">\(n \le 10^9\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">divisor</span><span class="p">[],</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w">  </span><span class="c1">// 记录约数，divisor 约数</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举约数</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">divisor</span><span class="p">[</span><span class="o">++</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 注意完全平方数的判断</span>
+<span class="w">      </span><span class="n">divisor</span><span class="p">[</span><span class="o">++</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 似乎空间复杂度为 O(sqrt(n))</span>
+</code></pre></div></td></tr></table></div>
+<p>时间复杂度 <span class="arithmatex">\(O(\sqrt n)\)</span>，空间复杂度 <span class="arithmatex">\(\max(d(n))\)</span>，其中 <span class="arithmatex">\(d(n)\)</span> 表示 <span class="arithmatex">\(n\)</span> 的约数数量，大约为 <span class="arithmatex">\(O(n^{\frac{1}{3}})\)</span>。适用于求解少量较大数的约数。</p>
+<p><img alt="" src="https://cdn.luogu.com.cn/upload/image_hosting/3ok46vsq.png" /></p>
+<h3 id="枚举倍数倍数法">枚举倍数（倍数法）<a class="headerlink" href="#枚举倍数倍数法" title="Permanent link"></a></h3>
+<p>给定 <span class="arithmatex">\(n\)</span>，求 <span class="arithmatex">\(1 \sim n\)</span> 的每个数的约数，<span class="arithmatex">\(n \le 10^5\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">// 每个数的约数数量不等，vector 存储约数</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">divisor</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span><span class="w">  </span><span class="c1">// divisor[i] 记录了 i 的所有约数</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAXN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAXN</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举 i 的倍数 j</span>
+<span class="w">    </span><span class="n">divisor</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// j 有约数 i</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="cm">/* 或者以下代码</span>
+<span class="cm">  for (int j = 1; j * i &lt;= n; j++) {</span>
+<span class="cm">    divisor[j * i].push_back(i);</span>
+<span class="cm">  }</span>
+<span class="cm">  */</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>时间复杂度 <span class="arithmatex">\(\frac{n}{1} + \frac{n}{2} + \dots + \frac{n}{n} = O(n \log n)\)</span>，调和级数复杂度。</p>
+<p>空间复杂度 <span class="arithmatex">\(O(n \log n)\)</span>。实际上说明了 <span class="arithmatex">\(1 \sim n\)</span> 的约数数量为 <span class="arithmatex">\(O(n \log n)\)</span> 级别。</p>
+<h2 id="质数与合数">质数与合数<a class="headerlink" href="#质数与合数" title="Permanent link"></a></h2>
+<p>对于正整数 <span class="arithmatex">\(p \ne 0, 1\)</span>，如果 <span class="arithmatex">\(p\)</span> 除了 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(p\)</span> 以外没有其他约数，则 <span class="arithmatex">\(p\)</span> 为质数。</p>
+<p>对于正整数 <span class="arithmatex">\(p \ne 0, 1\)</span>，如果 <span class="arithmatex">\(p\)</span> 不是质数，则 <span class="arithmatex">\(p\)</span> 为合数。</p>
+<h3 id="质数判定">质数判定<a class="headerlink" href="#质数判定" title="Permanent link"></a></h3>
+<p>若 <span class="arithmatex">\(n\)</span> 为合数，则 <span class="arithmatex">\(n\)</span> 可以表示为 <span class="arithmatex">\(n = pq\)</span>，其中 <span class="arithmatex">\(p, q \gt 1\)</span>。</p>
+<ul>
+<li>令 <span class="arithmatex">\(p \le q\)</span>，则可以发现 <span class="arithmatex">\(n = pq \ge p^2\)</span>，则 <span class="arithmatex">\(p \le \sqrt n\)</span>。</li>
+<li>因此可以试除法，枚举 <span class="arithmatex">\(2 \sim \lbrack \sqrt{n} \rbrack\)</span> 内的数，然后判断是否有 <span class="arithmatex">\(n\)</span> 的约数。</li>
+</ul>
+<p>时间复杂度 <span class="arithmatex">\(O(\sqrt n)\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">P</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 试除法，枚举 2 ~ sqrt(n) 中的其他约数</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 找到其他约数，不是质数</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 特判 1，其他数为质数</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="质数筛">质数筛<a class="headerlink" href="#质数筛" title="Permanent link"></a></h3>
+<p>使用质数判断筛出 <span class="arithmatex">\(1 \sim n\)</span> 以内的质数，效率 <span class="arithmatex">\(O(n \sqrt n)\)</span> 很低，需要使用质数筛。</p>
+<p>质数筛的思想为筛除所有合数，剩下没被筛除的数为质数。每个合数都至少有一个质因数，利用质因数将合数筛除。</p>
+<h4 id="埃氏筛">埃氏筛<a class="headerlink" href="#埃氏筛" title="Permanent link"></a></h4>
+<p>思想：每找到一个质数，就将它的所有倍数筛去。</p>
+<p>算法思路：</p>
+<ul>
+<li>从 <span class="arithmatex">\(2\)</span> 开始从小到大枚举每个整数 <span class="arithmatex">\(i\)</span></li>
+<li>如果 <span class="arithmatex">\(i\)</span> 未被筛去<ul>
+<li>记录质数</li>
+<li>将 <span class="arithmatex">\(i\)</span> 的所有倍数筛去</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">tot</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 是质数</span>
+<span class="w">    </span><span class="n">prime</span><span class="p">[</span><span class="o">++</span><span class="n">tot</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// v[i] = i;  // 可以记录最小质因数</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 将所有质数的倍数筛除</span>
+<span class="w">      </span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">// if (!v[j]) v[j] = i;  // 可以记录首次筛除时的最小质因数</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>时间复杂度：<span class="arithmatex">\(\frac{n}{2}+\frac{n}{3}+\frac{n}{5}+\frac{n}{7}+\frac{n}{11}+\dots = O(n \log (\log n))\)</span>。 </p>
+<h4 id="欧拉筛线性筛">欧拉筛（线性筛）<a class="headerlink" href="#欧拉筛线性筛" title="Permanent link"></a></h4>
+<p>埃氏筛时间复杂度不是线性，因为一个合数会被它的多个质因子筛去。</p>
+<ul>
+<li>如果每个合数只会被筛一次，那么时间复杂度是线性 <span class="arithmatex">\(O(n)\)</span> 的。</li>
+<li>每个合数都有一个最小质因数，尝试利用最小质因数将合数筛除。</li>
+</ul>
+<p>欧拉筛：使用<strong>最小质因数</strong>作为倍数，将每个合数筛去。每个合数只会被其最小质因数筛去。</p>
+<p>算法思路：</p>
+<ul>
+<li>从 <span class="arithmatex">\(2\)</span> 开始从小到大枚举每个整数 <span class="arithmatex">\(i\)</span></li>
+<li>如果 <span class="arithmatex">\(i\)</span> 未被筛去<ul>
+<li>记录质数</li>
+</ul>
+</li>
+<li>从小到大枚举质数表中的每个质数 <span class="arithmatex">\(prime[j]\)</span><ul>
+<li>筛去合数 <span class="arithmatex">\(i * prime[j]\)</span>，此时 <span class="arithmatex">\(i * prime[j]\)</span> 的最小质因子为 <span class="arithmatex">\(prime[j]\)</span></li>
+<li>如果 <span class="arithmatex">\(i \ \% \ prime[j] == 0\)</span>，跳出 <span class="arithmatex">\(j\)</span> 循环，因为更大的 <span class="arithmatex">\(prime[j]\)</span> 不再是 <span class="arithmatex">\(i * prime[j]\)</span> 的最小质因子</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">tot</span><span class="p">;</span>
+
+<span class="c1">// 线性筛（欧拉筛），筛出 1 ~ n 内的所有质数</span>
+<span class="c1">// 线性筛：每个合数只被其最小质因数筛掉</span>
+<span class="c1">// 时间复杂度：O(n)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Sieve</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举每个数</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">                  </span><span class="c1">// 数字没被筛掉</span>
+<span class="w">      </span><span class="c1">// v[i] = i;                // 可以最小质因数</span>
+<span class="w">      </span><span class="n">prime</span><span class="p">[</span><span class="o">++</span><span class="n">tot</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">           </span><span class="c1">// 记录质数</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">tot</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举质数表的每个质数作为最小质因数，保证不越界</span>
+<span class="w">      </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                                 </span><span class="c1">// 筛掉合数 i * prime[j]</span>
+<span class="w">      </span><span class="c1">//v[i * prime[j]] = prime[j];                        // 或者记录最小质因数</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                             </span><span class="c1">// 保证了 i * prime[j] 的最小质因数为 prime[j]</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="c1">// 当 i % prime[j] = 0 时，i 的质因数分解形式包含了 prime[j]</span>
+<span class="w">      </span><span class="c1">// 即 i 的最小质因数就是 prime[j]</span>
+<span class="w">      </span><span class="c1">// 如果继续往后枚举质数，prime[j] 比 i 的最小质因数要大</span>
+<span class="w">      </span><span class="c1">// i * prime[j] 的最小质因数不是 prime[j]，因此 i * prime[j] 不能被 prime[j] 筛除</span>
+<span class="w">      </span><span class="c1">// 因此 i % prime[j] = 0，不需要再枚举更大的 prime[j] 了</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>时间复杂度 <span class="arithmatex">\(O(n)\)</span>，空间复杂度 <span class="arithmatex">\(O(n)\)</span>。</p>
+<h2 id="最大公约数和最小公倍数">最大公约数和最小公倍数<a class="headerlink" href="#最大公约数和最小公倍数" title="Permanent link"></a></h2>
+<p>记 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 的最大公约数（greatest common divisor, gcd）和最小公倍数（least common multiple, lcm）为 </p>
+<p><span class="arithmatex">\(gcd(a_1, a_2, \dots, a_n) = (a_1, a_2, \dots, a_n)\)</span> 和 <span class="arithmatex">\(lcm(a_1, a_2, \dots, a_n) = [a_1, a_2, \dots, a_n]\)</span>。</p>
+<p>注意，对于任意整数 <span class="arithmatex">\(a \ne 0\)</span>，<span class="arithmatex">\((a, 0) = a\)</span>。</p>
+<p>互质：<span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 最大公约数为 <span class="arithmatex">\(1\)</span>，那么 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 互质。</p>
+<h3 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h3>
+<ul>
+<li>结合律和交换律，可以按任意顺序计算 gcd 和 lcm，例如 <span class="arithmatex">\((a_1, a_2, a_3) = ((a_1, a_2), a_3) = (a_1, (a_2, a_3)) = (a_2, (a_1, a_3))\)</span>，lcm 同理。</li>
+<li><span class="arithmatex">\((ka_1, ka_2, \dots, ka_n) = k \times (a_1, a_2, \dots a_n)\)</span>。lcm 同理。</li>
+<li>两数的 gcd 和 lcm 的乘积等于两数乘积，即 <span class="arithmatex">\((a_1, a_2) \times[a_1, a_2] = a_1 \times a_2\)</span>。</li>
+</ul>
+<h3 id="欧几里得算法">欧几里得算法<a class="headerlink" href="#欧几里得算法" title="Permanent link"></a></h3>
+<p>欧几里得算法求解两数 <span class="arithmatex">\(a, b\)</span> 最大公约数的时间复杂度为 <span class="arithmatex">\(O(\log (\max(a, b)))\)</span>。不要求时间复杂度的证明。</p>
+<p><span class="arithmatex">\((a, b) = (b, a \bmod b)\)</span>。注意，对于任意整数 <span class="arithmatex">\(a \ne 0\)</span>，<span class="arithmatex">\((a, 0) = a\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 最大公约数</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">lcm</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span><span class="c1">// 最小公倍数</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// 注意先除后乘，尽可能避免溢出</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="算数基本定理唯一分解定理">算数基本定理（唯一分解定理）<a class="headerlink" href="#算数基本定理唯一分解定理" title="Permanent link"></a></h2>
+<p>就是质因数分解。</p>
+<p>可以将任意大于等于 <span class="arithmatex">\(2\)</span> 的自然数 <span class="arithmatex">\(N\)</span> 分解为有限个质数的乘积，即 <span class="arithmatex">\(N = p_1^{a_1}p_2^{a_2}p_3^{a_3}\cdots p_k^{a_k}= \prod \limits_{i = 1} ^ k p_i^{a_i}\)</span>，其中 <span class="arithmatex">\(p_i\)</span> 是互不相同的质因数（<span class="arithmatex">\(2 \le p_1 \lt p_2 \lt \dots \lt p_k\)</span>），<span class="arithmatex">\(a_i\)</span> 是对应的质因数的幂次（<span class="arithmatex">\(a_i \ge 1\)</span>），<span class="arithmatex">\(k\)</span> 为 <span class="arithmatex">\(N\)</span> 分解出的不同质因数个数。</p>
+<h3 id="质因数分解">质因数分解<a class="headerlink" href="#质因数分解" title="Permanent link"></a></h3>
+<h4 id="试除法分解质因数">试除法分解质因数<a class="headerlink" href="#试除法分解质因数" title="Permanent link"></a></h4>
+<p>从 <span class="arithmatex">\(2\)</span> 开始枚举，找到一个 <span class="arithmatex">\(n\)</span> 的约数，就不断地将它分解。由于是从小到大枚举的约数，因此找到的因数也必然为质数。由于 <span class="arithmatex">\(n\)</span> 最多只有一个大于 <span class="arithmatex">\(\sqrt{n}\)</span> 的质因数，因此只用枚举 <span class="arithmatex">\(2 \sim \sqrt{n}\)</span> 中的质因数并作分解，最后特判大于 <span class="arithmatex">\(\sqrt{n}\)</span> 的质因数即可。</p>
+<p><strong>由于每次分解，至少将原数减半，因此分解过程时间复杂度为 <span class="arithmatex">\(O(\log n)\)</span>，并且 <span class="arithmatex">\(n\)</span> 的质因数个数不超过 <span class="arithmatex">\(O(\log n)\)</span>。</strong></p>
+<p>总时间复杂度为 <span class="arithmatex">\(O(\sqrt n)\)</span>，记录质因子空间复杂度 <span class="arithmatex">\(O(\log n)\)</span>。适用于对较少数量的较大数做质因数分解，<span class="arithmatex">\(n \le 10^{14}\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[];</span><span class="w">  </span><span class="c1">// 记录质因子分解形式，数组空间开 O(logn) 这么大</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 只有枚举 2 ~ sqrt(n) 的质因子 O(sqrt(n))</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 质因数分解 O(logn)</span>
+<span class="w">      </span><span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">cnt</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 特判大于 sqrt(n) 的质因数</span>
+<span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">cnt</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="最小质因数分解质因数">最小质因数分解质因数<a class="headerlink" href="#最小质因数分解质因数" title="Permanent link"></a></h4>
+<p>在埃氏筛中，可以记录每个合数首次被筛除的最小质因数。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">tot</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 是质数</span>
+<span class="w">    </span><span class="n">prime</span><span class="p">[</span><span class="o">++</span><span class="n">tot</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// 可以记录最小质因数</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 将所有质数的倍数筛除</span>
+<span class="w">      </span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">// if (!v[j]) v[j] = i;  // 可以记录首次筛除时的最小质因数</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>在欧拉筛中，每个合数都只被最小质因数作为倍数而筛除，筛除时记录最小质因数。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="w"> </span><span class="n">tot</span><span class="p">;</span>
+
+<span class="c1">// 线性筛（欧拉筛），筛出 1 ~ n 内的所有质数</span>
+<span class="c1">// 线性筛：每个合数只被其最小质因数筛掉</span>
+<span class="c1">// 时间复杂度：O(n)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Sieve</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举每个数</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">                  </span><span class="c1">// 数字没被筛掉</span>
+<span class="w">      </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">                   </span><span class="c1">// 记录最小质因数</span>
+<span class="w">      </span><span class="n">prime</span><span class="p">[</span><span class="o">++</span><span class="n">tot</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">           </span><span class="c1">// 记录质数</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">tot</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举质数表的每个质数作为最小质因数</span>
+<span class="w">      </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">];</span><span class="w">                          </span><span class="c1">// 或者记录最小质因数</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                             </span><span class="c1">// 保证了 i * prime[j] 的最小质因数为 prime[j]</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>利用最小质因数进行质因数分解：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[];</span><span class="w">  </span><span class="c1">// 记录质因子分解形式，空间 O(log n)</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 分解最小质因数</span>
+<span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">cnt</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w">          </span><span class="c1">// 记录</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>预处理最小质因子时间 <span class="arithmatex">\(O(n \log \log n)\)</span> 或 <span class="arithmatex">\(O(n)\)</span>，对单个数分解质因数 <span class="arithmatex">\(O(\log n)\)</span>。适用于对多个数值较小的数作质因数分解。例如，对 <span class="arithmatex">\(10^5\)</span> 个数值大小 <span class="arithmatex">\(\le 10^7\)</span> 的数做质因数分解。</p>
+<h3 id="质因数分解与约数">质因数分解与约数<a class="headerlink" href="#质因数分解与约数" title="Permanent link"></a></h3>
+<p>如果 <span class="arithmatex">\(x = \prod \limits_{i=1}^kp_i^{a_i}\)</span>，其中 <span class="arithmatex">\(p_i\)</span> 互不相同，<span class="arithmatex">\(a_i \ge 0\)</span>，有：</p>
+<ul>
+<li><span class="arithmatex">\(x\)</span> 的约数 <span class="arithmatex">\(d = \prod \limits_{i = 1}^k p_i^{c_i}\)</span>，其中 <span class="arithmatex">\(0 \le c_i \le a_i\)</span>。</li>
+<li><span class="arithmatex">\(d\)</span> 中出现的质因数，必然出现在 <span class="arithmatex">\(x\)</span> 的质因数中。<span class="arithmatex">\(d\)</span> 中每个质因子 <span class="arithmatex">\(p_i\)</span> 的出现次数 <span class="arithmatex">\(c_i\)</span> 必然不超过 <span class="arithmatex">\(x\)</span> 对应质因子的出现次数 <span class="arithmatex">\(a_i\)</span>。 </li>
+<li>因此可以利用质因数分解判断整除、约数、倍数。</li>
+<li>记约数数量函数 <span class="arithmatex">\(d(x)\)</span> 表示 <span class="arithmatex">\(x\)</span> 的正约数数量，由乘法原理可得 <span class="arithmatex">\(d(x) = (1+a_1) \times (1 + a_2) \times \dots \times(1 + a_k) = \prod \limits_{i = 1}^k (1 + a_i)\)</span>。</li>
+<li>进一步发现 <span class="arithmatex">\(d(x) = d(p_1^{c_1}) \times d(p_2^{c_2}) \times \dots \times d(p_k^{c_k})\)</span>。似乎可以对函数进行分解（积性函数）。</li>
+<li>对 <span class="arithmatex">\(x\)</span> 的每个质因子 <span class="arithmatex">\(p_i\)</span> 单独考虑，其约数 <span class="arithmatex">\(d\)</span> 对应的质因子 <span class="arithmatex">\(0 \le c_i \le a_i\)</span>，也就是 <span class="arithmatex">\(c_i\)</span> 有 <span class="arithmatex">\((a_i + 1)\)</span> 种选择。</li>
+<li>在质因数分解形式中，每种质因子之间是相互独立的，才可能使用乘法原理。</li>
+<li>逐月 P1324，欧拉筛预处理最小质因数，最小质因数分解法</li>
+<li>即约数和函数 <span class="arithmatex">\(\sigma(n)\)</span> 表示 <span class="arithmatex">\(n\)</span> 的所有正约数之和。</li>
+<li>不要求掌握。</li>
+</ul>
+<p>每个质因数相互独立。</p>
+<h3 id="质因数分解与公约数公倍数">质因数分解与公约数公倍数<a class="headerlink" href="#质因数分解与公约数公倍数" title="Permanent link"></a></h3>
+<p>如果 <span class="arithmatex">\(x = \prod \limits_{i=1}^kp_i^{a_i}\)</span>，<span class="arithmatex">\(y = \prod \limits_{i=1}^k p_i^{b_i}\)</span>（其中 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 和  <span class="arithmatex">\(b_1, \dots, b_k\)</span> 中可能有指数 <span class="arithmatex">\(0\)</span>），有：</p>
+<ul>
+<li>最大公约数 <span class="arithmatex">\((x, y) = \prod \limits_{i=1}^k p_i^{\min(a_i, b_i)}\)</span>。</li>
+<li>最小公倍数 <span class="arithmatex">\([x,y] = \prod \limits_{i=1}^k p_i^{\max(a_i, b_i)}\)</span>。</li>
+<li>对每个质因数单独考虑。</li>
+</ul>
+<p>两数的 gcd 和 lcm 的乘积等于两数乘积，即 <span class="arithmatex">\((x, y) \times [x, y] = x \times y\)</span>，写成质因数分解的形式为：</p>
+<ul>
+<li><span class="arithmatex">\(\prod \limits_{i=1}^k p_i^{\min(a_i, b_i)} \times \prod \limits_{i=1}^k p_i^{\max(a_i, b_i)} = \prod \limits_{i=1}^k p_i^{a_i + b_i}\)</span>。</li>
+<li>也就是 <span class="arithmatex">\(\min(a, b) + \max(a, b) = a + b\)</span> 的体现。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2024 Seekluna Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "navigation.tabs", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
