@@ -31,7 +31,7 @@ nav:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
   - 数学:
-    - 数学符号: math/CSPJ/notation.md
+    - 数学符号: math/notation.md
     - CSPJ:
       - 数论: math/CSPJ/number_theory.md
       - 数论习题: math/CSPJ/number_theory_problem.md
