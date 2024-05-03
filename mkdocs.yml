@@ -14,6 +14,7 @@ copyright: 'Copyright &copy; 2019 - 2024 Seekluna Team'
 # Contents
 nav:
   - CSPS: 
+    - 简介: CSPS/index.md
     - 数据结构:
       - 二叉堆: 
         - 概念: CSPS/ds/heap/二叉堆.md
@@ -29,6 +30,11 @@ nav:
   - L2-入门:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
+  - 数学:
+    - 数学符号: math/CSPJ/notation.md
+    - CSPJ:
+      - 数论: math/CSPJ/number_theory.md
+      - 数论习题: math/CSPJ/number_theory_problem.md
   - data structure:
     - stack: ds/stack.md
   - 动态规划:
