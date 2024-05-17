@@ -10,28 +10,28 @@
         <meta name="author" content="Seekluna">
       
       
-        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/math/CSPJ/number_theory_problem/">
+        <link rel="canonical" href="https://beyoursven.github.io/seekluna_docs/L2/two_pointer/">
       
       
-        <link rel="prev" href="../number_theory/">
+        <link rel="prev" href="../string/">
       
       
-        <link rel="next" href="../../../ds/stack/">
+        <link rel="next" href="../../math/notation/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
-        <title>数论习题 - Seekluna</title>
+        <title>双指针 - Seekluna</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#数论习题" class="md-skip">
+        <a href="#双指针" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Seekluna" class="md-header__button md-logo" aria-label="Seekluna" data-md-component="logo">
+    <a href="../.." title="Seekluna" class="md-header__button md-logo" aria-label="Seekluna" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数论习题
+              双指针
             
           </span>
         </div>
@@ -219,28 +219,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../CSPS/" class="md-tabs__link">
+        <a href="../../CSPS/" class="md-tabs__link">
           
   
   CSPS
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../L2/io_technique/" class="md-tabs__link">
-          
-  
-  L2-入门
 
         </a>
       </li>
@@ -257,7 +239,25 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../notation/" class="md-tabs__link">
+        <a href="../io_technique/" class="md-tabs__link">
+          
+  
+  L2-入门
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/notation/" class="md-tabs__link">
           
   
   数学
@@ -275,7 +275,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ds/stack/" class="md-tabs__link">
+        <a href="../../ds/stack/" class="md-tabs__link">
           
   
   data structure
@@ -293,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../dp/theory/" class="md-tabs__link">
+        <a href="../../dp/theory/" class="md-tabs__link">
           
   
   动态规划
@@ -326,7 +326,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Seekluna" class="md-nav__button md-logo" aria-label="Seekluna" data-md-component="logo">
+    <a href="../.." title="Seekluna" class="md-nav__button md-logo" aria-label="Seekluna" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
@@ -394,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/" class="md-nav__link">
+      <a href="../../CSPS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-nav__link">
+      <a href="../../CSPS/ds/heap/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/ds/heap/%E5%BA%94%E7%94%A8/" class="md-nav__link">
+      <a href="../../CSPS/ds/heap/%E5%BA%94%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/ds/heap/%E5%85%B6%E4%BB%96/" class="md-nav__link">
+      <a href="../../CSPS/ds/heap/%E5%85%B6%E4%BB%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/pq/" class="md-nav__link">
+      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/pq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/set/" class="md-nav__link">
+      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/multiset/" class="md-nav__link">
+      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/multiset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/map/" class="md-nav__link">
+      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CSPS/STL/%E5%AE%B9%E5%99%A8/reference/" class="md-nav__link">
+      <a href="../../CSPS/STL/%E5%AE%B9%E5%99%A8/reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,23 +771,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -798,7 +803,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             L2-入门
@@ -812,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../L2/io_technique/" class="md-nav__link">
+      <a href="../io_technique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,164 +838,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../L2/string/" class="md-nav__link">
+      <a href="../string/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     string
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../L2/two_pointer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    双指针
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    数学
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            数学
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../notation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    数学符号
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    CSPJ
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            CSPJ
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../number_theory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    数论
   </span>
   
 
@@ -1020,7 +872,7 @@
           
   
   <span class="md-ellipsis">
-    数论习题
+    双指针
   </span>
   
 
@@ -1031,7 +883,7 @@
         
   
   <span class="md-ellipsis">
-    数论习题
+    双指针
   </span>
   
 
@@ -1053,111 +905,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#约数和倍数" class="md-nav__link">
+  <a href="#介绍" class="md-nav__link">
     <span class="md-ellipsis">
-      约数和倍数
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="约数和倍数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#洛谷-p1403-约数研究" class="md-nav__link">
-    <span class="md-ellipsis">
-      洛谷 P1403 约数研究
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#洛谷-p1372-又是毕业季-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      洛谷 P1372 又是毕业季 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#洛谷-p1414-又是毕业季-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      洛谷 P1414 又是毕业季 2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="洛谷 P1414 又是毕业季 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#算法-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#算法-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法 2
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#算法-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法 3
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#质数与合数" class="md-nav__link">
-    <span class="md-ellipsis">
-      质数与合数
+      介绍
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gcd-和-lcm" class="md-nav__link">
+  <a href="#从模拟的角度看双指针" class="md-nav__link">
     <span class="md-ellipsis">
-      gcd 和 lcm
+      从模拟的角度看双指针
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#质因数分解" class="md-nav__link">
+  <a href="#优化枚举" class="md-nav__link">
     <span class="md-ellipsis">
-      质因数分解
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#其他" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他
+      优化枚举
     </span>
   </a>
   
@@ -1167,6 +935,152 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/notation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学符号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSPJ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSPJ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/CSPJ/number_theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/CSPJ/number_theory_problem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数论习题
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1232,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ds/stack/" class="md-nav__link">
+      <a href="../../ds/stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1298,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dp/theory/" class="md-nav__link">
+      <a href="../../dp/theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1319,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dp/memorization/" class="md-nav__link">
+      <a href="../../dp/memorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dp/sequence_dp/" class="md-nav__link">
+      <a href="../../dp/sequence_dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1361,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dp/multi_sequence_dp/" class="md-nav__link">
+      <a href="../../dp/multi_sequence_dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1382,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dp/matrix_dp/" class="md-nav__link">
+      <a href="../../dp/matrix_dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,111 +1344,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#约数和倍数" class="md-nav__link">
+  <a href="#介绍" class="md-nav__link">
     <span class="md-ellipsis">
-      约数和倍数
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="约数和倍数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#洛谷-p1403-约数研究" class="md-nav__link">
-    <span class="md-ellipsis">
-      洛谷 P1403 约数研究
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#洛谷-p1372-又是毕业季-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      洛谷 P1372 又是毕业季 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#洛谷-p1414-又是毕业季-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      洛谷 P1414 又是毕业季 2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="洛谷 P1414 又是毕业季 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#算法-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#算法-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法 2
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#算法-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法 3
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#质数与合数" class="md-nav__link">
-    <span class="md-ellipsis">
-      质数与合数
+      介绍
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gcd-和-lcm" class="md-nav__link">
+  <a href="#从模拟的角度看双指针" class="md-nav__link">
     <span class="md-ellipsis">
-      gcd 和 lcm
+      从模拟的角度看双指针
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#质因数分解" class="md-nav__link">
+  <a href="#优化枚举" class="md-nav__link">
     <span class="md-ellipsis">
-      质因数分解
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#其他" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他
+      优化枚举
     </span>
   </a>
   
@@ -1555,7 +1385,7 @@
                   
 
   
-    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/math/CSPJ/number_theory_problem.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/beyoursven/seekluna_docs/edit/master/docs/L2/two_pointer.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1563,90 +1393,117 @@
   
 
 
-<h1 id="数论习题">数论习题<a class="headerlink" href="#数论习题" title="Permanent link"></a></h1>
-<h2 id="约数和倍数">约数和倍数<a class="headerlink" href="#约数和倍数" title="Permanent link"></a></h2>
-<ul>
-<li>逐月 P1324</li>
-<li>洛谷 P1403 约数研究</li>
-<li>洛谷 P1414 又是毕业季</li>
-<li>洛谷 P1372 又是毕业季</li>
-<li>洛谷 P2926</li>
-</ul>
-<p>约数枚举和倍数枚举经常相互转化。</p>
-<h3 id="洛谷-p1403-约数研究">洛谷 P1403 约数研究<a class="headerlink" href="#洛谷-p1403-约数研究" title="Permanent link"></a></h3>
-<p>使用约数法枚举求解，时间复杂度 <span class="arithmatex">\(O(N \sqrt N)\)</span>。</p>
-<p>不再枚举约数，而是枚举约数出现在多少个倍数中（倍数枚举）</p>
-<p>使用倍数法枚举 <span class="arithmatex">\(i\)</span>，求解 <span class="arithmatex">\(1 \sim N\)</span> 有多少数是 <span class="arithmatex">\(i\)</span> 的倍数（所有 <span class="arithmatex">\(i\)</span> 的倍数都会有约数 <span class="arithmatex">\(i\)</span>），即 <span class="arithmatex">\(\sum \limits_{i = 1} ^ N \lfloor \dfrac{N}{i} \rfloor\)</span>。时间复杂度 <span class="arithmatex">\(O(N)\)</span>。</p>
-<h3 id="洛谷-p1372-又是毕业季-1">洛谷 P1372 又是毕业季 1<a class="headerlink" href="#洛谷-p1372-又是毕业季-1" title="Permanent link"></a></h3>
-<p>枚举约数 <span class="arithmatex">\(d\)</span>（枚举答案），这 <span class="arithmatex">\(k\)</span> 个人 <span class="arithmatex">\(d, 2d, 3d, \dots, kd\)</span>。只要最大的人的编号 <span class="arithmatex">\(kd \le n\)</span> 即可，即 <span class="arithmatex">\(d \le \lfloor \dfrac{n}{k} \rfloor\)</span>。</p>
-<h3 id="洛谷-p1414-又是毕业季-2">洛谷 P1414 又是毕业季 2<a class="headerlink" href="#洛谷-p1414-又是毕业季-2" title="Permanent link"></a></h3>
-<p>枚举答案约数 <span class="arithmatex">\(d\)</span>，看是否有至少 <span class="arithmatex">\(k\)</span> 个 <span class="arithmatex">\(d\)</span> 的倍数（如果有，答案是可以的）。</p>
-<p>令 <span class="arithmatex">\(V = 10^6\)</span>。</p>
-<h4 id="算法-1">算法 1<a class="headerlink" href="#算法-1" title="Permanent link"></a></h4>
-<p>枚举 <span class="arithmatex">\(k = i\)</span></p>
-<ul>
-<li>枚举答案 <span class="arithmatex">\(d\)</span></li>
-<li>枚举每个能力值，看有多少个 <span class="arithmatex">\(d\)</span> 的倍数</li>
-</ul>
-<p>总时间 <span class="arithmatex">\(O(n^2V)\)</span>。</p>
-<h4 id="算法-2">算法 2<a class="headerlink" href="#算法-2" title="Permanent link"></a></h4>
-<p>使用倍数法预处理 <span class="arithmatex">\(cnt_d\)</span> 表示 <span class="arithmatex">\(a_1 \dots a_n\)</span> 中 <span class="arithmatex">\(d\)</span> 的倍数数量。<span class="arithmatex">\(O(V \log V)\)</span>。</p>
-<p>枚举 <span class="arithmatex">\(k = i\)</span></p>
-<ul>
-<li>枚举答案 <span class="arithmatex">\(d\)</span>，求 <span class="arithmatex">\(cnt_d &gt;= k\)</span> 时 <span class="arithmatex">\(d\)</span> 的最大值。</li>
-</ul>
-<p>时间复杂度 <span class="arithmatex">\(O(V \log V + nV)\)</span>。</p>
-<h4 id="算法-3">算法 3<a class="headerlink" href="#算法-3" title="Permanent link"></a></h4>
-<p>令 <span class="arithmatex">\(ans_i\)</span> 表示 <span class="arithmatex">\(k = i\)</span> 时的答案。</p>
-<p>从小到大枚举答案 <span class="arithmatex">\(d\)</span></p>
-<ul>
-<li>维护 <span class="arithmatex">\(ans_{cnt_d}\)</span> 的最大值。</li>
-</ul>
-<p>注意到，并不是 <span class="arithmatex">\(ans_1 \dots ans_n\)</span> 都被求解出来</p>
-<ul>
-<li><span class="arithmatex">\(ans_n \ge 1\)</span>。</li>
-<li>
-<p>最终 <span class="arithmatex">\(ans_i \ge ans_{i + 1}\)</span>。</p>
-</li>
-<li>
-<p>从后往前维护 <span class="arithmatex">\(ans_i = \max(ans_i, ans_{i + 1})\)</span>。</p>
-</li>
-</ul>
-<p>预处理 <span class="arithmatex">\(O(V \log V)\)</span>，维护 <span class="arithmatex">\(ans\)</span> 数组 <span class="arithmatex">\(O(V)\)</span>，总时间复杂度 <span class="arithmatex">\(O(V \log V)\)</span>。<span class="arithmatex">\(cnt\)</span> 和 <span class="arithmatex">\(ans\)</span> 的空间复杂度 <span class="arithmatex">\(O(V)\)</span>。</p>
-<h2 id="质数与合数">质数与合数<a class="headerlink" href="#质数与合数" title="Permanent link"></a></h2>
-<ul>
-<li>逐月 P1321 质数判断</li>
-<li>逐月 P1322 埃氏筛</li>
-<li>洛谷 P3383 欧拉筛</li>
-<li>洛谷 P1835 区间筛</li>
-</ul>
-<h2 id="gcd-和-lcm">gcd 和 lcm<a class="headerlink" href="#gcd-和-lcm" title="Permanent link"></a></h2>
-<ul>
-<li>逐月 P1325</li>
-<li>洛谷 P1029 最大公约数和最小公倍数问题</li>
-<li>gcd on blackboard</li>
-<li>洛谷 P1072</li>
-<li>洛谷 P1572</li>
-<li>洛谷 P4057</li>
-<li>洛谷 P2651</li>
-<li>洛谷 P2660</li>
-<li>CF 1154G</li>
-</ul>
-<h2 id="质因数分解">质因数分解<a class="headerlink" href="#质因数分解" title="Permanent link"></a></h2>
-<ul>
-<li>逐月 P1323，试除法分解质因数</li>
-<li>逐月 P1324，欧拉筛预处理最小质因数，最小质因数分解法</li>
-<li>洛谷 P2043，试除法、最小质因数法都写一遍。</li>
-<li>CF 546D，将 <span class="arithmatex">\(1 \sim N\)</span> 表示为质因数分解形式</li>
-<li>arc067_a，求 <span class="arithmatex">\(N!\)</span> 的质因数分解形式</li>
-<li>abc215_d，质因数分解 + 筛</li>
-<li>abc259_e，较难</li>
-<li>CF 1047C，较难</li>
-</ul>
-<h2 id="其他">其他<a class="headerlink" href="#其他" title="Permanent link"></a></h2>
-<ul>
-<li>abc177_e</li>
-</ul>
+<h1 id="双指针">双指针<a class="headerlink" href="#双指针" title="Permanent link"></a></h1>
+<h2 id="介绍">介绍<a class="headerlink" href="#介绍" title="Permanent link"></a></h2>
+<p>双指针（two pointer），在国内又称为尺取法。一般来说，会定义两个或更多的指针在序列上进行扫描。根据指针的扫描模式，我们可以分为两种：同向扫描和反向扫描。</p>
+<p>反向扫描：设定两个指针 <span class="arithmatex">\(i, j\)</span>，<span class="arithmatex">\(i\)</span> 从头到尾扫描，<span class="arithmatex">\(j\)</span> 从尾到头扫描，一般在 <span class="arithmatex">\(i, j\)</span> 相遇时停止。</p>
+<p>同向扫描：设定两个指针 <span class="arithmatex">\(i, j\)</span>，<span class="arithmatex">\(i, j\)</span> 都是从头到尾扫描，一般在两个指针都（或其中之一）越界时停止。</p>
+<h2 id="从模拟的角度看双指针">从模拟的角度看双指针<a class="headerlink" href="#从模拟的角度看双指针" title="Permanent link"></a></h2>
+<p>代码的通常格式如下：</p>
+<p>!!! 模板（模拟视角）</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code>=== &quot;同向扫描&quot;
+    ```cpp
+    int i = 1, j = 1;
+    while (i &lt;= n &amp;&amp; j &lt;= n) {
+      if () {
+        // ...... 干一些事情
+        i++;  // 调整 i
+      } else {
+        // ...... 干一些事情
+        j--;  // 调整 j
+      }
+    }
+    ```
+
+=== &quot;反向扫描&quot;
+
+    ```cpp
+    int i = 1, j = n;
+    while (i &lt; j) {
+      if () {
+        // ...... 干一些事情
+        i++;  // 调整 i
+      } else {
+        // ...... 干一些事情
+        j--;  // 调整 j
+      }
+    }
+    ```
+</code></pre></div></td></tr></table></div>
+<h2 id="优化枚举">优化枚举<a class="headerlink" href="#优化枚举" title="Permanent link"></a></h2>
+<p>当序列中具有某种单调性时，可以使用双指针来优化枚举范围。</p>
+<p>代码的格式通常如下：</p>
+<p>!!! 模板（优化枚举视角）</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>=== &quot;同向扫描&quot;
+
+    ```cpp
+    for (int i = 1, j = 1; i &lt;= n; i++) {  // 从小到大枚举 i
+      for (; 满足一些条件; j++) {            // 从小到大调整 j
+        // ...... 干一些事情
+      }
+      // ...... 干一些事情
+    }
+    ```
+
+=== &quot;反向扫描&quot;
+
+    ```cpp
+    for (int i = 1, j = n; i &lt; j; i++) {  // 从小到大枚举 i
+      for (; 满足一些条件; j--) {           // 从大到小调整 j
+        // ...... 干一些事情
+      }
+      // ...... 干一些事情
+    }
+    ```
+</code></pre></div></td></tr></table></div>
+<p>关于双指针是如何用于枚举的，请学习以下例题。</p>
 
 
 
@@ -1697,12 +1554,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "navigation.tabs", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "navigation.tabs", "navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
