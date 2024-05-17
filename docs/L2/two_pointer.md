@@ -55,12 +55,13 @@
 把自然数 $1, 2, \dots, $ 看做成是一个升序序列。用指针 $i, j$ 分别表示所选择的自然数的左端（最小值）和右端（最大值），并且用 $sum$ 维护这段数的和：
 
 - 初始时 `i = 1, j = 0, sum = 0`
-- 如果 $sum \lt M$，说明还可以容纳更多的自然数，此时 `j++, sum += j`
-- 如果 $sum \ge M$，说明不能容纳更多的自然数，需要找下一个连续的自然数段，此时 `sum -= i, i++`。
+- 不断做如下操作，直到枚举范围超过 $M$
+  - 如果 $sum \lt M$，说明还可以容纳更多的自然数，此时 `j++, sum += j`
+  - 否则，说明不能容纳更多的自然数，需要找下一个连续的自然数段，此时 `sum -= i, i++`。
 
 注意 `sum == M` 的情况下输出答案、初始化、调整指针和维护数字和的顺序问题。
 
-!!! 代码
+??? 代码
 
     ```cpp
     #include <bits/stdc++.h>
@@ -98,12 +99,13 @@
 用 $i, j$ 分别指向数组的头尾元素，然后按照题意模拟：
 
 - 初始时 $i = 1, j = n$
-- 如果 $a_i \gt a_j$，取出元素 $a_i$，然后 $i++$
-- 否则，取出元素 $a_j$，然后 $j--$
+- 不断做如下操作，直到数列为空
+  - 如果 $a_i \gt a_j$，取出元素 $a_i$，然后 $i++$
+  - 否则，取出元素 $a_j$，然后 $j--$
 
 注意到，题目给出的是一个 $1 \sim n$ 的全排列，所有元素均不相同，因此取出元素的方法是唯一的。
 
-!!! 代码
+??? 代码
 
     ```cpp
     #include <bits/stdc++.h>
@@ -191,7 +193,7 @@ for (int i = 1; i <= n; i++) {
     sum += a[j];
     if (sum > k) {
       ans[i] = j;
-      break;  // 你可以理解为这是一个常数优化
+      break;  // 你可以理解为这是一个针对随机数据的常数优化
     }
   }
 }
@@ -244,6 +246,29 @@ for (int i = 1; i <= n; i++) {
     === "模拟视角"
 
         ```cpp
+        #include <bits/stdc++.h>
+        #define ll long long
+        using namespace std;
+        const int N = 2e5 + 5;
+        ll n, k, a[N];
+        int main() {
+          cin >> n >> k;
+          for (int i = 1; i <= n; ++i) {
+            cin >> a[i];
+          }
+          for (ll i = 1, j = 0, sum = 0; i <= n; ++i) {
+            while (j + 1 <= n && sum <= k) {
+              sum += a[++j];
+            }
+            if (sum > k) {
+              cout << j << ' ';
+            } else {
+              cout << -1 << ' ';
+            }
+            sum -= a[i];
+          }
+          return 0;
+        }
         ```
 
 由于每个元素最多会被 $i, j$ 指针各扫描一次，因此总时间复杂度为 $O(n)$。
@@ -271,7 +296,7 @@ for (int i = 1; i <= n; i++) {
       cout << i << ' ' << j;
       return 0;
     } else if (a[i] + a[j] < x) {
-      break;
+      break;  // 针对随机数据的常数优化
     }
   }
 }
@@ -344,6 +369,232 @@ cout << "IMPOSSIBLE";
     === "模拟视角"
 
         ```cpp
+        #include <bits/stdc++.h>
+        #define ll long long
+        using namespace std;
+        const int N = 2e5 + 5;
+        int n, x, a[N];
+        int main() {
+          cin >> n >> x;
+          for (int i = 1; i <= n; ++i) {
+            cin >> a[i];
+          }
+          for (int i = 1, j = n; i < j;) {
+            if (a[i] + a[j] > x) {
+              j--;
+            } else if (a[i] + a[j] < x) {
+              i++;
+            } else {
+              cout << i << ' ' << j;
+              return 0;
+            }
+          }
+          cout << "IMPOSSIBLE";
+          return 0;
+        }
         ```
 
 同样地，由于每个元素最多被 $i, j$ 指针各扫描一次，因此总时间复杂度为 $O(N)$。
+
+## 总结
+
+按扫描类型分类，双指针可以分为：同向扫描，反向扫描。
+
+从对双指针的认知角度和代码编写来看，既可以将双指针作为一种模拟算法来看待，也可以从优化枚举的角度来看。
+
+因此双指针就有 $2 \times 2$ 种写法，在平时的学习过程中应灵活运用（从应试的角度说，把其看做为模拟有助于理解双指针）。
+
+在双指针的实现过程中（无论是模拟视角还是优化枚举视角），一定要注意下标范围的问题！！！
+
+## 习题
+
+### 逐月 P1447 子段和
+
+!!! 题意
+
+    给定一个长度为 $n$ 的正整数序列和一个正整数 $x$。求出有多少子段满足子段和为 $x$。
+
+由于题目给定的元素均为正整数，我们可以考虑使用同向扫描的双指针解决这个问题。
+
+定义两个指针 $i, j$ 用于指明子段的头尾元素，$sum$ 记录子段和。
+
+- 初始时，$i = 1, j = 0, sum = 0$。
+- 不断做如下操作，直到超出枚举范围
+  - 如果 $sum \lt x$，`j++, sum += a[j]`
+  - 否则 $sum \ge x$，`sum -= a[i], i++`
+
+在指针移动的过程中统计答案即可。时间复杂度 $O(n)$。
+
+### 逐月 P1185 判断回文数组
+
+!!! 题意
+
+    给定一个整数数组，判断其是否回文。
+
+使用反向扫描的双指针模拟题意即可。时间复杂度 $O(n)$。
+
+### 逐月 P1446 二元函数
+
+!!! 题意
+
+    给定正整数 $N$，请求出不少于 $N$ 的最小正整数 $X$，使得 $X$ 能被表示为 $f(a, b) = a^3 + a^2b + ab^2 + b^3$，其中 $a, b$ 均为非负整数。$0 \le N \le 10^{18}$。
+
+构造法枚举技巧：通过枚举 $a, b$ 的值来构造出不少于 $N$ 的 $X$，进而对这些 $X$ 求出最小值。
+
+技巧：看到式子中有三次项，以及 $N \le 10^{18}$，可以推测出 $a, b \le 10^6$。当 $a = 10^6, b = 0$ 时，该式子的值为 $10^{18}$，由于 $N \le 10^{18}$，因此答案不可能比 $10^{18}$ 大。
+
+如果暴力枚举 $a, b$ 进行求解，显然超时。如果首先枚举 $a$，可以发现如下单调性：
+
+- 当 $a$ 固定时，随着 $b$ 的增大，$f(a, b)$ 严格增大。
+- 随着 $a$ 的增大，符合条件 $f(a, b) \ge N$ 的最小的 $b$ 越来越小。
+
+因此可以考虑使用反向扫描的双指针进行求解。
+
+- 初始时，$a = 0, b = 10^6$
+- 从小到大枚举 $a$
+  - 从大到小调整 $b$，直到 $f(a, b) \lt N$。
+
+可以在调整的过程中维护最小的 $X$，也可以在调整 $b$ 结束之后维护。时间复杂度 $O(V)$，其中 $V = 10^6$。
+
+??? 代码
+
+    === "优化枚举视角"
+
+        ```cpp
+        #include <bits/stdc++.h>
+
+        using namespace std;
+        using ll = long long;
+
+        ll n, ans = LLONG_MAX;
+
+        ll F(ll a, ll b) {
+          return a * a * a + a * a * b + a * b * b + b * b * b;
+        }
+
+        int main() {
+          cin >> n;
+          // 初始时，将 i 和 j 分别置为极小值、极大值
+          for (ll i = 0, j = 1e6; i <= 1e6; i++) {  // 从小到大枚举 i
+            for (; j >= 0 && F(i, j) >= n; j--) {   // 从大到小调整 j
+              ans = min(ans, F(i, j));
+            }
+          }
+          cout << ans;
+          return 0;
+        }
+        ```
+
+    === "模拟视角"
+
+        ```cpp
+        #include <bits/stdc++.h>
+        #define ll long long
+        using namespace std;
+        const int N = 2e5 + 5;
+        const ll inf = 1e18;
+        ll n, x, ans = inf;
+        ll f(ll a, ll b) {
+          return a * a * a + a * a * b + a * b * b + b * b * b;
+        }
+        int main() {
+          cin >> x;
+          for (int i = 0, j = 1e6; i <= 1e6;) {
+            if (j >= 0 && f(i, j) >= x) {
+              ans = min(ans, f(i, j));
+              j--;
+            } else {
+              i++;
+            }
+          }
+          cout << ans;
+          return 0;
+        }
+        ```
+
+### 逐月 P1596 两数之差
+
+!!! 题意
+
+    给定一个整数数组 $A$ 和一个整数 $X$，判断是否存在一对不同的 $i, j$ 使得 $A_i - A_j = X$。
+
+技巧：对式子做变形为 $A_i = A_j + X$。
+
+单调性：随着 $A_i$ 的增大，符合要求的 $A_j$ 肯定增大。
+
+我们可以将数组先排序，然后使用同向扫描的双指针。
+
+- 初始时，`i = j = 1`
+- 从小到大枚举 $A_i$
+  - 从小到大调整 $A_j$，直到 $A_j + X \ge A_i$
+  - 判断停下来的 $j$ 是否满足 $A_i = A_j + X$
+  
+时间复杂度 $O(N)$。
+
+??? 代码
+
+    === "优化枚举视角 1"
+
+        ```cpp
+        #include <bits/stdc++.h>
+
+        using namespace std;
+
+        const int MAXN = 2e5 + 1;
+
+        int n, x, a[MAXN];
+
+        int main() {
+          ios::sync_with_stdio(0), cin.tie(0);
+          cin >> n >> x;
+          for (int i = 1; i <= n; i++) {
+            cin >> a[i];
+          }
+          sort(a + 1, a + n + 1);  // 先让序列有序
+          // 初始时，i 和 j 都指向头元素
+          for (int i = 1, j = 1; i <= n; i++) {       // 从小到大枚举 i
+            for (; j <= n && a[j] + x < a[i]; j++) {  // 从小到大调整 j
+            }
+            if (j <= n && a[j] + x == a[i]) {
+              cout << "Yes";
+              return 0;
+            }
+          }
+          cout << "No";
+          return 0;
+        }
+
+        /*
+        atcoder 数据为随机，实际上存在一种针对 20 行 j <= n 的数据
+        5 -1
+        -1 -1 -1 -1 -1
+        NO
+        */
+        ```
+    === "优化枚举视角 2"
+
+        ```cpp
+        #include <bits/stdc++.h>
+        #define ll long long
+        using namespace std;
+        const int N = 2e5 + 5;
+        int n, x, a[N];
+        int main() {
+          cin >> n >> x;
+          for (int i = 1; i <= n; ++i) {
+            cin >> a[i];
+          }
+          sort(a + 1, a + 1 + n);
+          for (int i = 1, j = 1; i <= n; ++i) {
+            while (j <= n && a[j] - a[i] < x) {
+              ++j;
+            }
+            if (j <= n && a[j] - a[i] == x) {
+              cout << "Yes";
+              return 0;
+            }
+          }
+          cout << "No";
+          return 0;
+        }
+        ```
