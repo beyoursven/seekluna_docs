@@ -173,6 +173,10 @@ void Sieve(int n) {
 
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。
 
+### 杂项
+
+$1 \sim N$ 内的质数数量约为 $O(\dfrac{N}{\ln N})$。
+
 ## 最大公约数和最小公倍数
 
 记 $a_1, a_2, \dots, a_n$ 的最大公约数（greatest common divisor, gcd）和最小公倍数（least common multiple, lcm）为 
