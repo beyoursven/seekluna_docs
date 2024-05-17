@@ -13,27 +13,6 @@
 代码的通常格式如下：
 
 !!! 模板
-    时代峰峻SDK复健科。
-
-!!! example
-
-    === "Unordered List"
-
-        ``` markdown
-        * Sed sagittis eleifend rutrum
-        * Donec vitae suscipit est
-        * Nulla tempor lobortis orci
-        ```
-
-    === "Ordered List"
-
-        ``` markdown
-        1. Sed sagittis eleifend rutrum
-        2. Donec vitae suscipit est
-        3. Nulla tempor lobortis orci
-        ```
-
-??? 模板模拟视角
 
     === "同向扫描"
 
@@ -65,13 +44,13 @@
         }
         ```
     
-## 优化枚举
+## 从优化枚举的视角看双指针
 
 当序列中具有某种单调性时，可以使用双指针来优化枚举范围。
 
 代码的格式通常如下。
 
-!!! 模板优化枚举视角
+!!! 模板
 
     === "同向扫描"
 
