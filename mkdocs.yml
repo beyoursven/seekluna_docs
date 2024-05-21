@@ -37,7 +37,9 @@ nav:
       - 数论: math/CSPJ/number_theory.md
       - 数论习题: math/CSPJ/number_theory_problem.md
   - data structure:
-    - stack: ds/stack.md
+    - 栈: ds/stack.md
+    - 队列: ds/queue.md
+    - c++ stl 容器: ds/stl_container.md
   - 动态规划:
     - 理论: dp/theory.md
     - 记忆化: dp/memorization.md
