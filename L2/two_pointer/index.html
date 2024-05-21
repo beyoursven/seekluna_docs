@@ -1258,7 +1258,49 @@
         
   
   <span class="md-ellipsis">
-    stack
+    栈
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/stl_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c++ stl 容器
   </span>
   
 
@@ -1630,14 +1672,36 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...... 干一些事情</span>
 <span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 i</span>
 <span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...... 干一些事情</span>
-<span class="w">    </span><span class="n">j</span><span class="o">--</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 j</span>
+<span class="w">    </span><span class="n">j</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 j</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...... 干一些事情</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 i</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...... 干一些事情</span>
+<span class="w">    </span><span class="n">j</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 j</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1652,8 +1716,30 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...... 干一些事情</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 i</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...... 干一些事情</span>
+<span class="w">    </span><span class="n">j</span><span class="o">--</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 j</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...... 干一些事情</span>
 <span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// 调整 i</span>
@@ -1673,7 +1759,7 @@
 <p>给定正整数 <span class="arithmatex">\(M\)</span>，找出所有的连续的正整数段之和为 <span class="arithmatex">\(M\)</span> 的段（至少包含两个整数），并且按字典序的顺序输出符合要求的整数段。</p>
 </div>
 <p>同向扫描双指针。</p>
-<p>把自然数 $1, 2, \dots, $ 看做成是一个升序序列。用指针 <span class="arithmatex">\(i, j\)</span> 分别表示所选择的自然数的左端（最小值）和右端（最大值），并且用 <span class="arithmatex">\(sum\)</span> 维护这段数的和：</p>
+<p>把自然数 <span class="arithmatex">\(1, 2, \dots\)</span> 看做成是一个升序序列。用指针 <span class="arithmatex">\(i, j\)</span> 分别表示所选择的自然数的左端（最小值）和右端（最大值），并且用 <span class="arithmatex">\(sum\)</span> 维护这段数的和：</p>
 <ul>
 <li>初始时 <code>i = 1, j = 0, sum = 0</code></li>
 <li>不断做如下操作，直到枚举范围超过 <span class="arithmatex">\(M\)</span></li>
@@ -1736,10 +1822,10 @@
 <p>使用同向扫描双指针进行模拟。</p>
 <p>用 <span class="arithmatex">\(i, j\)</span> 分别指向数组的头尾元素，然后按照题意模拟：</p>
 <ul>
-<li>初始时 <span class="arithmatex">\(i = 1, j = n\)</span></li>
+<li>初始时 <code>i = 1, j = n</code></li>
 <li>不断做如下操作，直到数列为空</li>
-<li>如果 <span class="arithmatex">\(a_i \gt a_j\)</span>，取出元素 <span class="arithmatex">\(a_i\)</span>，然后 <span class="arithmatex">\(i++\)</span></li>
-<li>否则，取出元素 <span class="arithmatex">\(a_j\)</span>，然后 <span class="arithmatex">\(j--\)</span></li>
+<li>如果 <span class="arithmatex">\(a_i \gt a_j\)</span>，取出元素 <span class="arithmatex">\(a_i\)</span>，然后 <code>i++</code></li>
+<li>否则，取出元素 <span class="arithmatex">\(a_j\)</span>，然后 <code>j--</code></li>
 </ul>
 <p>注意到，题目给出的是一个 <span class="arithmatex">\(1 \sim n\)</span> 的全排列，所有元素均不相同，因此取出元素的方法是唯一的。</p>
 <details class="代码">
@@ -2203,7 +2289,7 @@
 <p>由于题目给定的元素均为正整数，我们可以考虑使用同向扫描的双指针解决这个问题。</p>
 <p>定义两个指针 <span class="arithmatex">\(i, j\)</span> 用于指明子段的头尾元素，<span class="arithmatex">\(sum\)</span> 记录子段和。</p>
 <ul>
-<li>初始时，<span class="arithmatex">\(i = 1, j = 0, sum = 0\)</span>。</li>
+<li>初始时，<code>i = 1, j = 0, sum = 0</code></li>
 <li>不断做如下操作，直到超出枚举范围</li>
 <li>如果 <span class="arithmatex">\(sum \lt x\)</span>，<code>j++, sum += a[j]</code></li>
 <li>否则 <span class="arithmatex">\(sum \ge x\)</span>，<code>sum -= a[i], i++</code></li>

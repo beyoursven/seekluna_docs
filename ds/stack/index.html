@@ -16,7 +16,7 @@
         <link rel="prev" href="../../math/CSPJ/number_theory_problem/">
       
       
-        <link rel="next" href="../../dp/theory/">
+        <link rel="next" href="../queue/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>stack - Seekluna</title>
+        <title>栈 - Seekluna</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stack" class="md-skip">
+        <a href="#栈" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              stack
+              栈
             
           </span>
         </div>
@@ -1088,16 +1088,214 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    栈
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    stack
+    栈
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#数组模拟实现" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组模拟实现
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数组模拟实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#遍历" class="md-nav__link">
+    <span class="md-ellipsis">
+      遍历
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#压入" class="md-nav__link">
+    <span class="md-ellipsis">
+      压入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#弹出" class="md-nav__link">
+    <span class="md-ellipsis">
+      弹出
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#应用" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#括号序列" class="md-nav__link">
+    <span class="md-ellipsis">
+      括号序列
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="括号序列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#方法-1栈" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法 1：栈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#方法-2计数" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法 2：计数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#后缀表达式计算" class="md-nav__link">
+    <span class="md-ellipsis">
+      后缀表达式计算
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#题目" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stl_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c++ stl 容器
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1280,6 +1478,140 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#数组模拟实现" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组模拟实现
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数组模拟实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#遍历" class="md-nav__link">
+    <span class="md-ellipsis">
+      遍历
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#压入" class="md-nav__link">
+    <span class="md-ellipsis">
+      压入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#弹出" class="md-nav__link">
+    <span class="md-ellipsis">
+      弹出
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#应用" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#括号序列" class="md-nav__link">
+    <span class="md-ellipsis">
+      括号序列
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="括号序列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#方法-1栈" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法 1：栈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#方法-2计数" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法 2：计数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#后缀表达式计算" class="md-nav__link">
+    <span class="md-ellipsis">
+      后缀表达式计算
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#题目" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1301,8 +1633,109 @@
   
 
 
-<h1 id="stack">stack<a class="headerlink" href="#stack" title="Permanent link"></a></h1>
-<p>stack is a LIFO structure</p>
+<h1 id="栈">栈<a class="headerlink" href="#栈" title="Permanent link"></a></h1>
+<p>栈是 OI 中常见的一种线性数据结构，栈中元素的插入和删除是按照【先进后出】的原则进行的，因此栈也被称为后进先出（last in first out,）的线性表，简称 LIFO 表。</p>
+<h2 id="结构">结构<a class="headerlink" href="#结构" title="Permanent link"></a></h2>
+<p>（示意图，栈底，栈顶）</p>
+<p>（插入和删除元素操作只能在栈顶进行）</p>
+<h2 id="数组模拟实现">数组模拟实现<a class="headerlink" href="#数组模拟实现" title="Permanent link"></a></h2>
+<h3 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">stk</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="w"> </span><span class="c1">// 数组模拟栈，stack</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 栈顶指针，栈底从 1 开始编号，栈顶指向栈的最上面的元素</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="遍历">遍历<a class="headerlink" href="#遍历" title="Permanent link"></a></h3>
+<p>时间复杂度 <span class="arithmatex">\(O(n)\)</span>，其中 <span class="arithmatex">\(n\)</span> 为栈中元素数量。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 从栈底到栈顶输出元素</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(){</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">top</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">stk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="压入">压入<a class="headerlink" href="#压入" title="Permanent link"></a></h3>
+<p>时间复杂度 <span class="arithmatex">\(O(1)\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 压入元素到栈顶</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">push</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">){</span>
+<span class="w">  </span><span class="n">stk</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="弹出">弹出<a class="headerlink" href="#弹出" title="Permanent link"></a></h3>
+<p>时间复杂度 <span class="arithmatex">\(O(1)\)</span>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// 弹出栈顶元素</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">pop</span><span class="p">(){</span>
+<span class="w">  </span><span class="n">top</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// 访问栈顶元素</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">Top</span><span class="p">(){</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">stk</span><span class="p">[</span><span class="n">top</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>弹出元素、访问栈顶元素时，栈不能为空。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">stk</span><span class="p">[</span><span class="n">top</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// do something</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="应用">应用<a class="headerlink" href="#应用" title="Permanent link"></a></h2>
+<h3 id="括号序列">括号序列<a class="headerlink" href="#括号序列" title="Permanent link"></a></h3>
+<p>这里首先给出合法括号序列的定义：</p>
+<div class="admonition 括号序列定义">
+<p class="admonition-title">括号序列定义</p>
+<p>定义一个合法括号序列为仅由 <code>(</code> 和 <code>)</code> 构成的字符串 <code>S</code>，且满足以下所有条件：</p>
+<ul>
+<li>如果 <code>S</code> 是空串，<code>S</code> 是合法括号序列</li>
+<li>如果 <code>S</code> 是合法括号序列，那么在 <code>S</code> 之外嵌套一对括号得到的字符串 <code>(S)</code> 是合法括号序列（嵌套）</li>
+<li>如果 <code>S</code> 和 <code>T</code> 是合法括号序列，那么将 <code>S</code> 和 <code>T</code> 拼接在一起得到的字符串 <code>ST</code> 是合法括号序列（拼接） </li>
+</ul>
+</div>
+<p>我们有两种判定括号序列是否合法的方法。</p>
+<h4 id="方法-1栈">方法 1：栈<a class="headerlink" href="#方法-1栈" title="Permanent link"></a></h4>
+<p>对于给定的括号序列 <span class="arithmatex">\(s\)</span>，我们按如下步骤维护一个栈：</p>
+<ul>
+<li>对于 <span class="arithmatex">\(i = 1, 2, \dots, |s|\)</span>（也就是从前往后处理字符串）：</li>
+<li>如果 <span class="arithmatex">\(s_i\)</span> 是 <code>(</code>，将当前括号的位置 <span class="arithmatex">\(i\)</span> 压入栈中</li>
+<li>否则，<span class="arithmatex">\(s_i\)</span> 是 <code>)</code>，并且栈不为空，弹出栈顶元素 <span class="arithmatex">\(x\)</span>，并且 <span class="arithmatex">\(s_x\)</span> 和 <span class="arithmatex">\(s_i\)</span> 是一对配对的括号</li>
+<li>否则，<span class="arithmatex">\(s_i\)</span> 是 <code>)</code> 但栈为空，当前右括号无法配对，因此 <span class="arithmatex">\(s\)</span> 不是合法括号序列</li>
+<li>处理结束后，如果栈不为空，说明有左括号无法配对，因此 <span class="arithmatex">\(s\)</span> 不是合法括号序列</li>
+</ul>
+<p>时间复杂度 <span class="arithmatex">\(O(n)\)</span></p>
+<h4 id="方法-2计数">方法 2：计数<a class="headerlink" href="#方法-2计数" title="Permanent link"></a></h4>
+<p>在方法 1 中，我们用一个栈既判定了 <span class="arithmatex">\(s\)</span> 是否为合法括号序列，同时求出了每对配对的括号的位置。观察到栈中存储的都是左括号位置，如果 <span class="arithmatex">\(s_i\)</span> 是 <code>(</code> 栈中元素数量 <span class="arithmatex">\(+1\)</span>，如果 <span class="arithmatex">\(s_i\)</span> 是 <code>)</code> 且栈非空则栈中元素数量 <span class="arithmatex">\(-1\)</span>。</p>
+<p>因此我们可以得到如下的更简洁的判定括号序列的方法：</p>
+<ul>
+<li>将左括号视作为 <span class="arithmatex">\(1\)</span>，右括号视作为 <span class="arithmatex">\(-1\)</span>，得到新的序列 <span class="arithmatex">\(a\)</span>。</li>
+<li>求出 <span class="arithmatex">\(a\)</span> 的前缀和数组 <span class="arithmatex">\(sum\)</span>。</li>
+<li>如果任意一个位置的前缀和都非负（即 <span class="arithmatex">\(sum_1, sum_2, \dots, sum_n \ge 0\)</span>），并且 <span class="arithmatex">\(sum_n = 0\)</span>，那么括号序列合法。</li>
+</ul>
+<p>时间复杂度 <span class="arithmatex">\(O(n)\)</span>。</p>
+<h3 id="后缀表达式计算">后缀表达式计算<a class="headerlink" href="#后缀表达式计算" title="Permanent link"></a></h3>
+<p>待编写。</p>
+<h2 id="题目">题目<a class="headerlink" href="#题目" title="Permanent link"></a></h2>
+<ul>
+<li>逐月 P1336 栈练习</li>
+<li>逐月 P1337 括号配对</li>
+<li>洛谷 P1449 后缀表达式</li>
+<li>洛谷 P1241 括号序列</li>
+<li>洛谷 P4387 验证栈序列</li>
+<li>洛谷 P1981 表达式求值</li>
+</ul>
 
 
 
