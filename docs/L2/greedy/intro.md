@@ -82,6 +82,7 @@
     定义变量 $sum$ 和 $cnt$ 记录当前子段和以及子段数量。
 
     对于 $i = 1, 2, \dots, N$ 的每个数字 $A_i$：
+    
     - 如果当前数字能放进当前子段，即 $sum + A_i \le M$，那么直接放入，然后更新 $sum \gets sum + A_i$
     - 否则新开一个子段，更新 $cnt \gets cnt + 1, sum \gets A_i$
 
