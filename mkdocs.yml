@@ -31,6 +31,8 @@ nav:
     - 输入技巧: L2/io_technique.md
     - string: L2/string.md
     - 双指针: L2/two_pointer.md
+    - 贪心:
+      - 初步介绍: L2/greedy/intro.md
   - 数学:
     - 数学符号: math/notation.md
     - CSPJ:
