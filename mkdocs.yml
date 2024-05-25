@@ -77,7 +77,7 @@ theme:
         name: Switch to light mode
   include_search_page: false
   search_index_only: true
-  favicon: 'favicon.ico'
+  # favicon: 'favicon.ico'
   icon:
     logo: 'material/school'
     repo: fontawesome/brands/github
