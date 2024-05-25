@@ -19,7 +19,7 @@
         <link rel="next" href="../../../math/notation/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
@@ -2020,8 +2020,85 @@
 </code></pre></div></td></tr></table></div>
 </details>
 <h3 id="逐月-p1567-接水问题">逐月 P1567 接水问题<a class="headerlink" href="#逐月-p1567-接水问题" title="Permanent link"></a></h3>
+<div class="admonition 题意">
+<p class="admonition-title">题意</p>
+<p>有 <span class="arithmatex">\(n\)</span> 个人要接水，有 <span class="arithmatex">\(m\)</span> 个水龙头。给定 <span class="arithmatex">\(n\)</span> 个人的接水时长 <span class="arithmatex">\(t_i\)</span>，按顺序让每个人接水，求所有人接完水的最小时间。</p>
+</div>
+<p>贪心策略：每次接水的人去的水龙头一定是最早接完水的水龙头。</p>
+<p>正确性：从题意可知，当一个人接水完毕，排队的人会立马到他的位置接水。</p>
+<details class="实现和时间复杂度">
+<summary>实现和时间复杂度</summary>
+<p>我们用 <span class="arithmatex">\(a_1, a_2, \dots, a_m\)</span> 记录每个水龙头的接水量（由于一单位时间接一单位水，接水量完全等价于接水时长）。</p>
+<p>对于接下来要接水的第 <span class="arithmatex">\(i\)</span> 个人来说，他需要找到 <span class="arithmatex">\(a_1 \sim a_m\)</span> 中接水时长最小的水龙头，然后去接水。每次对 <span class="arithmatex">\(a_1, a_2, \dots, a_m\)</span> 排序，这样 <span class="arithmatex">\(a_1\)</span> 一定对应了最早接完水的水龙头，让第 <span class="arithmatex">\(i\)</span> 个人去该水龙头接水，然后更新接水时长 <span class="arithmatex">\(a_1 \gets a_1 + t_i\)</span> 即可。当 <span class="arithmatex">\(n\)</span> 个人都处理完后，最终答案就是 <span class="arithmatex">\(a_i\)</span> 的最大值。</p>
+<p>有 <span class="arithmatex">\(n\)</span> 个人要接水，每次需要排序找到接水时长最小的水龙头，时间复杂度 <span class="arithmatex">\(O(n \times m \log m)\)</span>。</p>
+<p>更进一步，我们并不需要每次换人都重新排序，只需要通过暴力枚举找到哪个位置是最早接完水的就行了（即 <span class="arithmatex">\(a_i\)</span> 中最小值出现的位置）。时间复杂度降低为 <span class="arithmatex">\(O(n \times m)\)</span>。</p>
+</details>
+<details class="代码">
+<summary>代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// sort(a + 1, a + m + 1);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ans</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">        </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="p">);</span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
 <h3 id="逐月-p1600-子序列判断">逐月 P1600 子序列判断<a class="headerlink" href="#逐月-p1600-子序列判断" title="Permanent link"></a></h3>
+<div class="admonition 题意">
+<p class="admonition-title">题意</p>
+<p>给你两个字符串 <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(T\)</span>。请你判断 <span class="arithmatex">\(T\)</span> 是否为 <span class="arithmatex">\(S\)</span> 的子序列。</p>
+</div>
+<p>贪心策略：对于 <span class="arithmatex">\(T\)</span> 的每个字符，从 <span class="arithmatex">\(S\)</span> 中上一次与 <span class="arithmatex">\(T\)</span> 匹配的位置开始找到与当前查找字符相同的<strong>最近位置</strong>。</p>
 <h3 id="逐月-p1601-混合牛奶">逐月 P1601 混合牛奶<a class="headerlink" href="#逐月-p1601-混合牛奶" title="Permanent link"></a></h3>
 <div class="admonition 题意">
 <p class="admonition-title">题意</p>
@@ -2029,7 +2106,24 @@
 </div>
 <p>贪心策略：优先找单位牛奶售价 <span class="arithmatex">\(p_i\)</span> 小的农民购买牛奶。</p>
 <h3 id="逐月-p1602-排队接水">逐月 P1602 排队接水<a class="headerlink" href="#逐月-p1602-排队接水" title="Permanent link"></a></h3>
+<div class="admonition 题意">
+<p class="admonition-title">题意</p>
+<p>有 <span class="arithmatex">\(n\)</span> 个人在一个水龙头前排队接水，假如每个人接水的时间为 <span class="arithmatex">\(T_i\)</span>，请编程找出这 <span class="arithmatex">\(n\)</span> 个人排队的一种顺序，使得 <span class="arithmatex">\(n\)</span> 个人的平均等待时间最小。</p>
+</div>
+<p>贪心策略：优先让等待时间小的人接水。</p>
+<p>如何理解这样的贪心策略？等待时间大的人排在前面，会让后面的人的等待时间都变多。</p>
 <h3 id="逐月-p1472-预定货物">逐月 P1472 预定货物<a class="headerlink" href="#逐月-p1472-预定货物" title="Permanent link"></a></h3>
+<div class="admonition 题意">
+<p class="admonition-title">题意</p>
+<p>有一个物品，这个物品在第 <span class="arithmatex">\(i\)</span> 天的进价和售价是 <span class="arithmatex">\(a_i, b_i\)</span>，如果在第 <span class="arithmatex">\(i\)</span> 天购买，可以在第 <span class="arithmatex">\(i + 1\)</span> 天到第 <span class="arithmatex">\(n\)</span> 天中的任何一天进行出售。求买卖一次物品能够赚取到的最大差价是多少。</p>
+</div>
+<p>贪心策略 1：如果在第 <span class="arithmatex">\(i\)</span> 天出售，贪心地选择第 <span class="arithmatex">\(1\)</span> 天到第 <span class="arithmatex">\(i - 1\)</span> 天中进价最小的那天买。</p>
+<details class="解题思路和时间复杂度分析">
+<summary>解题思路和时间复杂度分析</summary>
+<p>枚举在第 <span class="arithmatex">\(i\)</span> 天出售，然后暴力循环查找前 <span class="arithmatex">\(i - 1\)</span> 天的最小进价，时间复杂度 <span class="arithmatex">\(O(n)\)</span>，不能接受。</p>
+<p>观察到我们是求解一个【前缀】上的最小值，因此可以边枚举 <span class="arithmatex">\(i\)</span> 边更新前 <span class="arithmatex">\(i - 1\)</span> 天的最小值。时间复杂度 <span class="arithmatex">\(O(n)\)</span>。</p>
+</details>
+<p>贪心策略 2：如果在第 <span class="arithmatex">\(i\)</span> 天购买，贪心地选择第 <span class="arithmatex">\(i + 1\)</span> 天到第 <span class="arithmatex">\(n\)</span> 天中售价最高的那天卖出。</p>
 <h3 id="逐月-p1598-纸币问题-ii">逐月 P1598 纸币问题 II<a class="headerlink" href="#逐月-p1598-纸币问题-ii" title="Permanent link"></a></h3>
 <p>本题用于说明，有时候思考得到的贪心策略不是正确的。</p>
 <div class="admonition 题意">
