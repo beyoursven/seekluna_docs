@@ -46,6 +46,7 @@ nav:
     - 理论: dp/theory/theory.md
     - dp 简介: dp/dp_intro.md
     - 最长上升子序列: dp/LIS.md
+    - 背包 dp: dp/knapsack_dp.md
     - 记忆化: dp/memorization.md
     - 单序列 dp: dp/sequence_dp.md
     - 多序列 dp: dp/multi_sequence_dp.md
