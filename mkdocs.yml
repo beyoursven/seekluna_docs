@@ -20,6 +20,7 @@ nav:
         - 概念: CSPS/ds/heap/二叉堆.md
         - 应用: CSPS/ds/heap/应用.md
         - 其他: CSPS/ds/heap/其他.md
+      - 并查集: CSPS/ds/dsu/dsu.md
     - STL:
       - 容器:
         - 优先队列: CSPS/STL/容器/pq.md
