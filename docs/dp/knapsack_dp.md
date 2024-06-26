@@ -321,7 +321,103 @@ for (int i = 1; i <= n; i++) {  // 拓扑序
 
 ### 滚动数组空间优化
 
+以 01-背包 采药这道题为例。
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int N = 105, M = 1e3 + 5;
+
+int t, n, ans;
+int a[N], b[N];
+int dp[2][M];
+
+int main() {
+  cin >> t >> n;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i] >> b[i];
+  }
+  for (int i = 1; i <= n; i++) {
+    for (int j = 0; j <= t; j++) {
+      dp[1][j] = dp[0][j];
+      if (j >= a[i]) {
+        dp[1][j] = max(dp[1][j], dp[0][j - a[i]] + b[i]);
+      }
+    }
+    // swap(dp[0], dp[1]);
+    for (int j = 0; j <= t; j++) {
+      dp[0][j] = dp[1][j];
+      dp[1][j] = 0;
+    }
+  }
+  cout << dp[0][t];
+  return 0;
+}
+```
+
 ### 降维空间优化
+
+以采药这道 01 背包问题为例，它的降维优化为：
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int N = 105, M = 1e3 + 5;
+
+int t, n, ans;
+int a[N], b[N];
+int dp[M];
+
+int main() {
+  cin >> t >> n;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i] >> b[i];
+  }
+  for (int i = 1; i <= n; i++) {
+    for (int j = t; j >= a[i]; j--) {  // 对于本题而言，该循环必须倒序
+      dp[j] = max(dp[j], dp[j - a[i]] + b[i]);
+    }
+  }
+  cout << dp[t];
+  return 0;
+}
+```
+
+以逐月 P1390 货币系统 1 这道完全背包为例，它的优化为：
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int N = 1e2 + 5, M = 1e6 + 5, Mod = 1e9 + 7;
+
+int n, x;
+int a[N];
+int dp[M];
+
+int main() {
+  cin >> n >> x;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+  }
+  dp[0] = 1;
+  // 它的状态设计是 (i, x) 前 i 种货币构造出了面值 x
+  // 必须依次枚举每种货币的数量
+  for (int i = 1; i <= n; i++) {
+    for (int j = a[i]; j <= x; j++) {  // 必须正着的
+      dp[j] += dp[j - a[i]];
+      dp[j] %= Mod;
+    }
+  }
+  cout << dp[x];
+  return 0;
+}
+```
 
 ### 前缀优化
 

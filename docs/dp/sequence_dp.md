@@ -1,5 +1,38 @@
 # 序列 DP
 
+## 最大子段和
+
+!!! 题意
+
+    给定 $n$ 个整数，求最大非空子段和。
+
+### DP
+
+从前往后考虑构造子段，对于每个元素，只有两种选择：
+
+- 加入之前的子段
+- 新开一个子段
+
+令 $dp_i$ 表示以 $i$ 结尾的最大子段和。
+
+转移：$dp_i = \max \{dp_{i - 1}, 0 \} + a_i$。
+
+注意到，题目要求非空子段和，也就是说，当所有整数全为负数时，答案是所有整数中最大的那个。
+
+### 贪心（前缀）
+
+一个 $a_l \dots a_r$ 的子段和可以描述为 $sum_r - sum_{l - 1}$，其中 $1 \le l \le r \le n$。
+
+则最大子段和为 $\max \limits_{r = 1}^n (sum_r - \min \limits_{l = 1}^{r - 1} sum_{l - 1})$。
+
+```cpp
+for (int i = 1; i <= n; i++) {
+  sum += a[i];
+  ans = max(ans, sum - pre);
+  pre = min(pre, sum);
+}
+```
+
 ## 最长上升子序列
 
 longest increasing subsequence，简称 LIS。
