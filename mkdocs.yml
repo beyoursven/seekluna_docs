@@ -98,7 +98,7 @@ theme:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js
+  - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
 
 #extra_javascript:
 #  - javascripts/katex.js
