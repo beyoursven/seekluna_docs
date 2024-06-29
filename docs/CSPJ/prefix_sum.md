@@ -135,7 +135,7 @@ $$
 \textcolor{red}0 & \textcolor{red}1 & \textcolor{red}7 & \textcolor{red}{11} & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix}
+\end{bmatrix} \quad
 \begin{bmatrix}
 \textcolor{orange}0 & \textcolor{orange}0 & \textcolor{orange}0 & 0 & 0 & 0 \\
 \textcolor{orange}0 & \textcolor{orange}1 & \textcolor{orange}5 & 6 & 11 & 8 \\
@@ -152,7 +152,7 @@ $$
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix}
+\end{bmatrix} \quad
 \begin{bmatrix}
 \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 & 0 \\
 \textcolor{purple}0 & \textcolor{purple}1 & \textcolor{purple}5 & \textcolor{purple}6 & 11 & 8 \\
@@ -176,9 +176,9 @@ $$ A =
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} 
+$$
 
-\xrightarrow{\text{对每一行求出前缀和}}
-
+$$
 B = 
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -187,9 +187,9 @@ B =
 0 & 4 & 10 & 11 & 14 & 16 \\
 0 & 7 & 12 & 16 & 18 & 21
 \end{bmatrix}
+$$
 
-\xrightarrow{\text{对每一列求出前缀和}}
-
+$$
 C = 
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
