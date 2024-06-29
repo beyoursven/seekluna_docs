@@ -1,5 +1,7 @@
 window.MathJax = {
-  loader: { load: ['[tex]/color'] },
+  loader: {
+    load: ['[tex]/color']
+  },
   tex: {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
