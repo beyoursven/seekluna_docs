@@ -19,6 +19,14 @@ nav:
       - 二维前缀和: CSPJ/前缀和与差分/2D_prefix_sum.md
       - 差分: CSPJ/前缀和与差分/diff.md
       - 应用: CSPJ/前缀和与差分/application.md
+    - 贪心: 
+      - 介绍: CSPJ/贪心/intro.md
+      - 问题: CSPJ/贪心/problem.md
+    - 数据结构:
+      - vector: CSPJ/数据结构/vector.md
+      - 栈: CSPJ/数据结构/stack.md
+      - 队列: CSPJ/数据结构/queue.md
+      - map: CSPJ/数据结构/map.md
     - 数学:
       - 数学符号: CSPJ/math/notation.md
       - 数论: 
