@@ -13,6 +13,7 @@ copyright: 'Copyright &copy; 2019 - 2024 Seekluna Team'
 
 # Contents
 nav:
+  - 前缀和: CSPJ/prefix_sum.md
   - CSPS: 
     - 简介: CSPS/index.md
     - 数据结构:
