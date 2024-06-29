@@ -67,8 +67,8 @@ $$
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 1 & 5 & 6 & 11 & 8 \\
-0 & 1 & \color{Red}{7} & \textcolor{red}{11} & \textcolor{red}{9} & 4 \\
-0 & 4 & \textcolor{Red}{6} & \textcolor{red}{1} & \textcolor{red}{3} & 2 \\
+0 & 1 & \color{Red}{7} & \color{red}{11} & \color{red}{9} & 4 \\
+0 & 4 & \color{Red}{6} & \color{red}{1} & \color{red}{3} & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix}
 $$
@@ -81,8 +81,8 @@ $$
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 1 & 6 & 12 & 23 & 31 \\
-0 & \textcolor{red}{1} & 8 & 19 & \textcolor{green}{28} & 32 \\
-0 & \textcolor{red}{4} & 10 & 11 & \textcolor{green}{14} & 16 \\
+0 & \color{red}{1} & 8 & 19 & \color{green}{28} & 32 \\
+0 & \color{red}{4} & 10 & 11 & \color{green}{14} & 16 \\
 0 & 7 & 12 & 16 & 18 & 21
 \end{bmatrix}
 $$
@@ -103,16 +103,16 @@ $$
 
 $$
 \begin{bmatrix}
-\textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & 0 & 0 \\
-\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}5 & \textcolor{red}6 & 11 & 8 \\
-\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}7 & \textcolor{red}{11} & 9 & 4 \\
+\color{red}0 & \color{red}0 & \color{red}0 & \color{red}0 & 0 & 0 \\
+\color{red}0 & \color{red}1 & \color{red}5 & \color{red}6 & 11 & 8 \\
+\color{red}0 & \color{red}1 & \color{red}7 & \color{red}{11} & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} \qquad
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 1 & 6 & 12 & 23 & 31 \\
-0 & 2 & 14 & \textcolor{green}{31} & 51 & 63 \\
+0 & 2 & 14 & \color{green}{31} & 51 & 63 \\
 0 & 6 & 24 & 42 & 65 & 79 \\
 0 & 13 & 36 & 58 & 83 & 100
 \end{bmatrix}
@@ -130,16 +130,16 @@ $$
 
 $$
 \begin{bmatrix}
-\textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & 0 & 0 \\
-\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}5 & \textcolor{red}6 & 11 & 8 \\
-\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}7 & \textcolor{red}{11} & 9 & 4 \\
+\color{red}0 & \color{red}0 & \color{red}0 & \color{red}0 & 0 & 0 \\
+\color{red}0 & \color{red}1 & \color{red}5 & \color{red}6 & 11 & 8 \\
+\color{red}0 & \color{red}1 & \color{red}7 & \color{red}{11} & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} \quad
 \begin{bmatrix}
-\textcolor{orange}0 & \textcolor{orange}0 & \textcolor{orange}0 & 0 & 0 & 0 \\
-\textcolor{orange}0 & \textcolor{orange}1 & \textcolor{orange}5 & 6 & 11 & 8 \\
-\textcolor{orange}0 & \textcolor{orange}1 & \textcolor{orange}7 & 11 & 9 & 4 \\
+\color{orange}0 & \color{orange}0 & \color{orange}0 & 0 & 0 & 0 \\
+\color{orange}0 & \color{orange}1 & \color{orange}5 & 6 & 11 & 8 \\
+\color{orange}0 & \color{orange}1 & \color{orange}7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix}
@@ -147,15 +147,15 @@ $$
 
 $$
 \begin{bmatrix}
-\textcolor{blue}0 & \textcolor{blue}0 & \textcolor{blue}0 & 0 & 0 & 0 \\
-\textcolor{blue}0 & \textcolor{blue}1 & \textcolor{blue}5 & 6 & 11 & 8 \\
+\color{blue}0 & \color{blue}0 & \color{blue}0 & 0 & 0 & 0 \\
+\color{blue}0 & \color{blue}1 & \color{blue}5 & 6 & 11 & 8 \\
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} \quad
 \begin{bmatrix}
-\textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 & 0 \\
-\textcolor{purple}0 & \textcolor{purple}1 & \textcolor{purple}5 & \textcolor{purple}6 & 11 & 8 \\
+\color{purple}0 & \color{purple}0 & \color{purple}0 & \color{purple}0 & 0 & 0 \\
+\color{purple}0 & \color{purple}1 & \color{purple}5 & \color{purple}6 & 11 & 8 \\
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
@@ -214,8 +214,8 @@ $$
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 1 & 5 & 6 & 11 & 8 \\
-0 & 1 & \textcolor{green}7 & \textcolor{green}{11} & \textcolor{green}9 & 4 \\
-0 & 4 & \textcolor{green}6 & \textcolor{green}1 & \textcolor{green}3 & 2 \\
+0 & 1 & \color{green}7 & \color{green}{11} & \color{green}9 & 4 \\
+0 & 4 & \color{green}6 & \color{green}1 & \color{green}3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix}
 $$
@@ -224,33 +224,33 @@ $$
 
 $$
 \begin{bmatrix}
-\textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & 0 \\
-\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}5 & \textcolor{red}6 & \textcolor{red}{11} & 8 \\
-\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}7 & \textcolor{red}{11} & \textcolor{red}9 & 4 \\
-\textcolor{red}0 & \textcolor{red}4 & \textcolor{red}6 & \textcolor{red}1 & \textcolor{red}3 & 2 \\
+\color{red}0 & \color{red}0 & \color{red}0 & \color{red}0 & \color{red}0 & 0 \\
+\color{red}0 & \color{red}1 & \color{red}5 & \color{red}6 & \color{red}{11} & 8 \\
+\color{red}0 & \color{red}1 & \color{red}7 & \color{red}{11} & \color{red}9 & 4 \\
+\color{red}0 & \color{red}4 & \color{red}6 & \color{red}1 & \color{red}3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} \qquad
 
 \begin{bmatrix}
-\textcolor{orange}0 & \textcolor{orange}0 & 0 & 0 & 0 & 0 \\
-\textcolor{orange}0 & \textcolor{orange}1 & 5 & 6 & 11 & 8 \\
-\textcolor{orange}0 & \textcolor{orange}1 & 7 & 11 & 9 & 4 \\
-\textcolor{orange}0 & \textcolor{orange}4 & 6 & 1 & 3 & 2 \\
+\color{orange}0 & \color{orange}0 & 0 & 0 & 0 & 0 \\
+\color{orange}0 & \color{orange}1 & 5 & 6 & 11 & 8 \\
+\color{orange}0 & \color{orange}1 & 7 & 11 & 9 & 4 \\
+\color{orange}0 & \color{orange}4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix}
 $$
 
 $$
 \begin{bmatrix}
-\textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 \\
-\textcolor{purple}0 & \textcolor{purple}1 & \textcolor{purple}5 & \textcolor{purple}6 & \textcolor{purple}{11} & 8 \\
+\color{purple}0 & \color{purple}0 & \color{purple}0 & \color{purple}0 & \color{purple}0 & 0 \\
+\color{purple}0 & \color{purple}1 & \color{purple}5 & \color{purple}6 & \color{purple}{11} & 8 \\
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} \qquad
 \begin{bmatrix}
-\textcolor{blue}0 & \textcolor{blue}0 & 0 & 0 & 0 & 0 \\
-\textcolor{blue}0 & \textcolor{blue}1 & 5 & 6 & 11 & 8 \\
+\color{blue}0 & \color{blue}0 & 0 & 0 & 0 & 0 \\
+\color{blue}0 & \color{blue}1 & 5 & 6 & 11 & 8 \\
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
