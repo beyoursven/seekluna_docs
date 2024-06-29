@@ -99,7 +99,7 @@ $$
 pre_{i, j} = \sum \limits_{x = 1}^i \sum \limits_{y = 1}^j A_{x, y}
 $$
 
-通俗来讲，$pre{i,j}$ 是原矩阵中一个左上角子矩阵的元素和。例如下图中，右边的矩阵为左边区间的二维前缀和矩阵，绿色数字为红色数字对应的子矩阵和：
+通俗来讲，$pre_{i,j}$ 是原矩阵中一个左上角子矩阵的元素和。例如下图中，右边的矩阵为左边区间的二维前缀和矩阵，绿色数字为红色数字对应的子矩阵和：
 
 $$
 \begin{bmatrix}
@@ -136,7 +136,6 @@ $$
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} \qquad
-
 \begin{bmatrix}
 \textcolor{orange}0 & \textcolor{orange}0 & \textcolor{orange}0 & 0 & 0 & 0 \\
 \textcolor{orange}0 & \textcolor{orange}1 & \textcolor{orange}5 & 6 & 11 & 8 \\
