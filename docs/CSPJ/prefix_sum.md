@@ -229,8 +229,7 @@ $$
 \color{red}0 & \color{red}1 & \color{red}7 & \color{red}{11} & \color{red}9 & 4 \\
 \color{red}0 & \color{red}4 & \color{red}6 & \color{red}1 & \color{red}3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix} \qquad
-
+\end{bmatrix} \quad
 \begin{bmatrix}
 \color{orange}0 & \color{orange}0 & 0 & 0 & 0 & 0 \\
 \color{orange}0 & \color{orange}1 & 5 & 6 & 11 & 8 \\
@@ -247,7 +246,7 @@ $$
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix} \qquad
+\end{bmatrix} \quad
 \begin{bmatrix}
 \color{blue}0 & \color{blue}0 & 0 & 0 & 0 & 0 \\
 \color{blue}0 & \color{blue}1 & 5 & 6 & 11 & 8 \\
