@@ -135,7 +135,9 @@ $$
 \textcolor{red}0 & \textcolor{red}1 & \textcolor{red}7 & \textcolor{red}{11} & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix} \qquad
+\end{bmatrix}
+$$
+$$
 \begin{bmatrix}
 \textcolor{orange}0 & \textcolor{orange}0 & \textcolor{orange}0 & 0 & 0 & 0 \\
 \textcolor{orange}0 & \textcolor{orange}1 & \textcolor{orange}5 & 6 & 11 & 8 \\
@@ -143,20 +145,20 @@ $$
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix} 
-
-\\[6pt]
-
-\begin{bmatrix}
-\textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 & 0 \\
-\textcolor{purple}0 & \textcolor{purple}1 & \textcolor{purple}5 & \textcolor{purple}6 & 11 & 8 \\
-0 & 1 & 7 & 11 & 9 & 4 \\
-0 & 4 & 6 & 1 & 3 & 2 \\
-0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix} \qquad
-
+$$
+$$
 \begin{bmatrix}
 \textcolor{blue}0 & \textcolor{blue}0 & \textcolor{blue}0 & 0 & 0 & 0 \\
 \textcolor{blue}0 & \textcolor{blue}1 & \textcolor{blue}5 & 6 & 11 & 8 \\
+0 & 1 & 7 & 11 & 9 & 4 \\
+0 & 4 & 6 & 1 & 3 & 2 \\
+0 & 7 & 5 & 4 & 2 & 3 
+\end{bmatrix}
+$$
+$$
+\begin{bmatrix}
+\textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 & 0 \\
+\textcolor{purple}0 & \textcolor{purple}1 & \textcolor{purple}5 & \textcolor{purple}6 & 11 & 8 \\
 0 & 1 & 7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
