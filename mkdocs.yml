@@ -14,7 +14,7 @@ copyright: 'Copyright &copy; 2019 - 2024 Seekluna Team'
 # Contents
 nav:
   - CSPJ:
-    - 前缀和与差分
+    - 前缀和与差分:
       - 一维前缀和: CSPJ/前缀和与差分/1D_prefix_sum.md
       - 二维前缀和: CSPJ/前缀和与差分/2D_prefix_sum.md
       - 差分: CSPJ/前缀和与差分/diff.md
