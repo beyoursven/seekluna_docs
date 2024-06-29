@@ -24,14 +24,14 @@
 如果暴力循环修改元素，单次操作的时间复杂度为 $O(N)$，总时间复杂度为 $O(QN)$，太慢了。我们观察在操作前后的原数组 $A$ 和它的差分数组 $D$。
 
 $$
-A = [A_1, A_2, \dots, A_{l - 1}, A_l, A_{l + 1}, \dots, A_r, A_{r + 1}, \dots, A_N] \\ 
+A = [A_1, A_2, \dots, A_{l - 1}, A_l, A_{l + 1}, \dots, A_r, A_{r + 1}, \dots, A_N] \\\\ 
 D = [D_1, D_2, \dots, D_{l - 1}, D_l, D_{l + 1}, \dots, D_r, D_{r + 1}, \dots, D_N]
 $$
 
 在操作之后：
 
 $$
-A = [A_1, A_2, \dots, A_{l - 1}, A_l + x, A_{l + 1} + x, \dots, A_r + x, A_{r + 1}, \dots, A_N] \\ 
+A = [A_1, A_2, \dots, A_{l - 1}, A_l + x, A_{l + 1} + x, \dots, A_r + x, A_{r + 1}, \dots, A_N] \\\\ 
 D = [D_1, D_2, \dots, D_{l - 1}, D_l + x, D_{l + 1}, \dots, D_r, D_{r + 1} + x, \dots, D_N]
 $$
 
