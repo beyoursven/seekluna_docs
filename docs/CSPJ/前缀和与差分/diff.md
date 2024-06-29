@@ -25,8 +25,8 @@
 
 $$
 \begin{align}
-A = [A_1, A_2, \dots, A_{l - 1}, A_l, A_{l + 1}, \dots, A_r, A_{r + 1}, \dots, A_N] \\ 
-D = [D_1, D_2, \dots, D_{l - 1}, D_l, D_{l + 1}, \dots, D_r, D_{r + 1}, \dots, D_N]
+A & = [A_1, A_2, \dots, A_{l - 1}, A_l, A_{l + 1}, \dots, A_r, A_{r + 1}, \dots, A_N] \\ 
+D & = [D_1, D_2, \dots, D_{l - 1}, D_l, D_{l + 1}, \dots, D_r, D_{r + 1}, \dots, D_N]
 \end{align}
 $$
 
@@ -34,8 +34,8 @@ $$
 
 $$
 \begin{align}
-A = [A_1, A_2, \dots, A_{l - 1}, A_l + x, A_{l + 1} + x, \dots, A_r + x, A_{r + 1}, \dots, A_N] \\
-D = [D_1, D_2, \dots, D_{l - 1}, D_l + x, D_{l + 1}, \dots, D_r, D_{r + 1} + x, \dots, D_N]
+A & = [A_1, A_2, \dots, A_{l - 1}, A_l + x, A_{l + 1} + x, \dots, A_r + x, A_{r + 1}, \dots, A_N] \\
+D & = [D_1, D_2, \dots, D_{l - 1}, D_l + x, D_{l + 1}, \dots, D_r, D_{r + 1} + x, \dots, D_N]
 \end{align}
 $$
 
@@ -132,6 +132,24 @@ $A, D_1, D_2$ 之间的关系如下：
 $$
 A \xrightleftharpoons[列维度前缀和]{列维度差分} D_1 \xrightleftharpoons[行维度前缀和]{行维度差分} D_2
 $$
+
+??? 代码
+
+    ```cpp
+    int a[MAXN][MAXN];
+
+    for (int i = 1; i <= q; i++) {
+      cin >> x1 >> y1 >> x2 >> y2;
+      a[x1][y1]++, a[x1][y2 + 1]--;
+      a[x2 + 1][y1]--, a[x2 + 1][y2 + 1]++;
+    }
+
+    for (int i = 1; i <= n; i++) {
+      for (int j = 1; j <= m; j++) {
+        a[i][j] += a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1];
+      }
+    }
+    ```
 
 实际上，我们也可以对矩阵 $D_2$ 的每行求出前缀和得到 $D_3$，然后对 $D_3$ 的每列求前缀和得到 $A$。
 

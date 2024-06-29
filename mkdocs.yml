@@ -19,6 +19,10 @@ nav:
       - 二维前缀和: CSPJ/前缀和与差分/2D_prefix_sum.md
       - 差分: CSPJ/前缀和与差分/diff.md
       - 应用: CSPJ/前缀和与差分/application.md
+    - 数学:
+      - 数学符号: math/notation.md
+      - 数论: math/CSPJ/number_theory.md
+      - 数论习题: math/CSPJ/number_theory_problem.md
   - CSPS: 
     - 简介: CSPS/index.md
     - 数据结构:
@@ -42,11 +46,6 @@ nav:
       - 初步介绍: L2/greedy/intro.md
   - 图论:
     - 最小生成树: graph/mst.md
-  - 数学:
-    - 数学符号: math/notation.md
-    - CSPJ:
-      - 数论: math/CSPJ/number_theory.md
-      - 数论习题: math/CSPJ/number_theory_problem.md
   - data structure:
     - 栈: ds/stack.md
     - 队列: ds/queue.md
