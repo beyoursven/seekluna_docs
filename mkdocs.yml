@@ -34,6 +34,8 @@ nav:
     - 双指针: L2/two_pointer.md
     - 贪心:
       - 初步介绍: L2/greedy/intro.md
+  - 图论:
+    - 最小生成树: graph/mst.md
   - 数学:
     - 数学符号: math/notation.md
     - CSPJ:
