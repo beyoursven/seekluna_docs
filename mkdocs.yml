@@ -98,7 +98,8 @@ theme:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 #extra_javascript:
 #  - javascripts/katex.js
