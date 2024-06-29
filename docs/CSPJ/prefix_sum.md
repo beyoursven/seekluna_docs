@@ -143,7 +143,9 @@ $$
 \textcolor{orange}0 & \textcolor{orange}1 & \textcolor{orange}7 & 11 & 9 & 4 \\
 0 & 4 & 6 & 1 & 3 & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
-\end{bmatrix} \qquad
+\end{bmatrix} 
+
+\\[6pt]
 
 \begin{bmatrix}
 \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 & 0 \\
