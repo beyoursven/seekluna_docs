@@ -13,7 +13,12 @@ copyright: 'Copyright &copy; 2019 - 2024 Seekluna Team'
 
 # Contents
 nav:
-  - 前缀和: CSPJ/prefix_sum.md
+  - CSPJ:
+    - 前缀和与差分
+      - 一维前缀和: CSPJ/前缀和与差分/1D_prefix_sum.md
+      - 二维前缀和: CSPJ/前缀和与差分/2D_prefix_sum.md
+      - 差分: CSPJ/前缀和与差分/diff.md
+      - 应用: CSPJ/前缀和与差分/application.md
   - CSPS: 
     - 简介: CSPS/index.md
     - 数据结构:
