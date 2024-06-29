@@ -39,9 +39,9 @@ $$
 
 $$
 \begin{align}
-A_l + A_{l + 1} + \dots + A_r & = (A_1 + A_2 + \dots + A_r) - (A_1 + A_2 + \dots + A_{l - 1}) \notag \\ 
-& = \sum \limits_{i = 1}^r A_i - \sum \limits_{i = 1}^{l - 1} A_i \notag \\
-& = pre_r - pre_{l - 1} \notag
+A_l + A_{l + 1} + \dots + A_r & = (A_1 + A_2 + \dots + A_r) - (A_1 + A_2 + \dots + A_{l - 1}) \\ 
+& = \sum \limits_{i = 1}^r A_i - \sum \limits_{i = 1}^{l - 1} A_i \\
+& = pre_r - pre_{l - 1}
 \end{align}
 $$
 
@@ -197,5 +197,62 @@ C =
 0 & 2 & 14 & 31 & 51 & 63 \\
 0 & 6 & 24 & 42 & 65 & 79 \\
 0 & 13 & 36 & 58 & 83 & 100
+\end{bmatrix}
+$$
+
+### 使用二维前缀和优化子矩阵查询
+
+对于一次询问给出的子矩阵的左上角坐标 $(x_1, y_1)$ 和右下角坐标 $(x_2, y_2)$，我们可以通过以下式子计算出子矩阵和：
+
+$$
+\sum \limits_{x = x_1}^{x_2} \sum \limits_{y = y_1}^{y_2} A_{x, y} = pre_{x_2, y_2} - pre_{x_1 - 1, y_2} - pre_{x_2, y_1 - 1} + pre_{x_1 - 1, y_1 - 1}
+$$
+
+我们还是通过图示来理解这个容斥的式子。当所有子矩阵和的左上角为 $(3, 3)$ 右下角为 $(4, 5)$ 时，绿色为所求子矩阵：
+
+$$
+\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 5 & 6 & 11 & 8 \\
+0 & 1 & \textcolor{green}7 & \textcolor{green}{11} & \textcolor{green}9 & 4 \\
+0 & 4 & \textcolor{green}6 & \textcolor{green}1 & \textcolor{green}3 & 2 \\
+0 & 7 & 5 & 4 & 2 & 3 
+\end{bmatrix}
+$$
+
+绿色部分等于“红色-橘色-紫色+蓝色”，如以下矩阵：
+
+$$
+\begin{bmatrix}
+\textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & \textcolor{red}0 & 0 \\
+\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}5 & \textcolor{red}6 & \textcolor{red}{11} & 8 \\
+\textcolor{red}0 & \textcolor{red}1 & \textcolor{red}7 & \textcolor{red}{11} & \textcolor{red}9 & 4 \\
+\textcolor{red}0 & \textcolor{red}4 & \textcolor{red}6 & \textcolor{red}1 & \textcolor{red}3 & 2 \\
+0 & 7 & 5 & 4 & 2 & 3 
+\end{bmatrix} \qquad
+
+\begin{bmatrix}
+\textcolor{orange}0 & \textcolor{orange}0 & 0 & 0 & 0 & 0 \\
+\textcolor{orange}0 & \textcolor{orange}1 & 5 & 6 & 11 & 8 \\
+\textcolor{orange}0 & \textcolor{orange}1 & 7 & 11 & 9 & 4 \\
+\textcolor{orange}0 & \textcolor{orange}4 & 6 & 1 & 3 & 2 \\
+0 & 7 & 5 & 4 & 2 & 3 
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+\textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & \textcolor{purple}0 & 0 \\
+\textcolor{purple}0 & \textcolor{purple}1 & \textcolor{purple}5 & \textcolor{purple}6 & \textcolor{purple}{11} & 8 \\
+0 & 1 & 7 & 11 & 9 & 4 \\
+0 & 4 & 6 & 1 & 3 & 2 \\
+0 & 7 & 5 & 4 & 2 & 3 
+\end{bmatrix} \qquad
+\begin{bmatrix}
+\textcolor{blue}0 & \textcolor{blue}0 & 0 & 0 & 0 & 0 \\
+\textcolor{blue}0 & \textcolor{blue}1 & 5 & 6 & 11 & 8 \\
+0 & 1 & 7 & 11 & 9 & 4 \\
+0 & 4 & 6 & 1 & 3 & 2 \\
+0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix}
 $$
