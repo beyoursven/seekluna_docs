@@ -67,8 +67,8 @@ $$
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 1 & 5 & 6 & 11 & 8 \\
-0 & 1 & \color{red}{7} & \textcolor{red}{11} & \textcolor{red}{9} & 4 \\
-0 & 4 & \textcolor{red}{6} & \textcolor{red}{1} & \textcolor{red}{3} & 2 \\
+0 & 1 & \color{Red}{7} & \textcolor{red}{11} & \textcolor{red}{9} & 4 \\
+0 & 4 & \textcolor{Red}{6} & \textcolor{red}{1} & \textcolor{red}{3} & 2 \\
 0 & 7 & 5 & 4 & 2 & 3 
 \end{bmatrix}
 $$
