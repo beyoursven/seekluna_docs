@@ -170,7 +170,7 @@ D_2=
 $$
 
 $$
-A \xrightleftharpoons[行维度前缀和]{行维度差分} D_3 \xrightleftharpoons[列维度前缀和]{列维度差分} D_2
+A \xleftrightharpoons[行维度前缀和]{行维度差分} D_3 \xrightleftharpoons[列维度前缀和]{列维度差分} D_2
 $$
 
 ## 题目
