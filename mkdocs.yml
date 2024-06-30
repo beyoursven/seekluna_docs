@@ -18,35 +18,39 @@ nav:
       - 一维前缀和: CSPJ/前缀和与差分/1D_prefix_sum.md
       - 二维前缀和: CSPJ/前缀和与差分/2D_prefix_sum.md
       - 差分: CSPJ/前缀和与差分/diff.md
-      - 应用: CSPJ/前缀和与差分/application.md
+      - 例题和应用: CSPJ/前缀和与差分/application.md
     - 贪心: 
       - 介绍: CSPJ/贪心/intro.md
-      - 问题: CSPJ/贪心/problem.md
+      - 题目: CSPJ/贪心/problem.md
     - 数据结构:
       - vector: CSPJ/数据结构/vector.md
       - 栈: CSPJ/数据结构/stack.md
       - 队列: CSPJ/数据结构/queue.md
       - map: CSPJ/数据结构/map.md
+      - 链表: CSPJ/数据结构/链表/list.md
+      - 题目: CSPJ/数据结构/problem.md
     - 搜索:
       - 深度优先搜索: CSPJ/搜索/深度优先搜索.md
       - 搜索剪枝: CSPJ/搜索/剪枝.md
       - 状态图遍历: CSPJ/搜索/状态图遍历.md
+      - 题单: CSPJ/搜索/problem.md
     - 高精度: CSPJ/高精度/big_int.md
-    - 链表: CSPJ/链表/list.md
     - 二分:
       - 二分查找: CSPJ/二分/二分查找.md
       - 二分答案: CSPJ/二分/二分答案.md
+      - 题单: CSPJ/二分/problem.md
     - 数学:
-      - 数学符号: CSPJ/math/notation.md
+      - 数学符号: CSPJ/数学/notation.md
       - 数论（约数，质数，公约数）: 
-        - 知识点: CSPJ/math/number_theory.md
-        - 习题: CSPJ/math/number_theory_problem.md
-      - 取整: CSPJ/math/取整.md
-      - 同余: CSPJ/math/同余.md
-      - 进制: CSPJ/math/进制.md
-      - 幂运算: CSPJ/math/幂运算.md
-      - 集合论: CSPJ/math/集合论.md
-      - 组合数学: CSPJ/math/组合数学.md
+        - 知识点: CSPJ/数学/number_theory.md
+        - 习题: CSPJ/数学/number_theory_problem.md
+      - 取整: CSPJ/数学/取整.md
+      - 同余: CSPJ/数学/同余.md
+      - 进制: CSPJ/数学/进制.md
+      - 位运算: CSPJ/数学/位运算.md
+      - 幂运算: CSPJ/数学/幂运算.md
+      - 集合论: CSPJ/数学/集合论.md
+      - 组合数学: CSPJ/数学/组合数学.md
   - CSPS: 
     - 简介: CSPS/index.md
     - 数据结构:

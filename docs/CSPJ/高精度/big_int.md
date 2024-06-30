@@ -196,3 +196,7 @@ cout << '\n' << r;
 ```
 
 时间复杂度 $O(n)$，其中 $n$ 为高精度数字位数。
+
+## 题单
+
+[vjudge](https://vjudge.net/contest/636586)
