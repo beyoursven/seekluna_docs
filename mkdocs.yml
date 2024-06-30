@@ -29,6 +29,9 @@ nav:
       - map: CSPJ/数据结构/map.md
     - 高精度: CSPJ/高精度/big_int.md
     - 链表: CSPJ/链表/list.md
+    - 二分:
+      - 二分查找: CSPJ/二分/二分查找.md
+      - 二分答案: CSPJ/二分/二分答案.md
     - 数学:
       - 数学符号: CSPJ/math/notation.md
       - 数论: 
