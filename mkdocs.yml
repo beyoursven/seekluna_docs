@@ -27,6 +27,8 @@ nav:
       - 栈: CSPJ/数据结构/stack.md
       - 队列: CSPJ/数据结构/queue.md
       - map: CSPJ/数据结构/map.md
+    - 高精度: CSPJ/高精度/big_int.md
+    - 链表: CSPJ/链表/list.md
     - 数学:
       - 数学符号: CSPJ/math/notation.md
       - 数论: 
