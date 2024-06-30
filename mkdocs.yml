@@ -38,9 +38,15 @@ nav:
       - 二分答案: CSPJ/二分/二分答案.md
     - 数学:
       - 数学符号: CSPJ/math/notation.md
-      - 数论: 
+      - 数论（约数，质数，公约数）: 
         - 知识点: CSPJ/math/number_theory.md
         - 习题: CSPJ/math/number_theory_problem.md
+      - 取整: CSPJ/math/取整.md
+      - 同余: CSPJ/math/同余.md
+      - 进制: CSPJ/math/进制.md
+      - 幂运算: CSPJ/math/幂运算.md
+      - 集合论: CSPJ/math/集合论.md
+      - 组合数学: CSPJ/math/组合数学.md
   - CSPS: 
     - 简介: CSPS/index.md
     - 数据结构:
