@@ -27,6 +27,10 @@ nav:
       - 栈: CSPJ/数据结构/stack.md
       - 队列: CSPJ/数据结构/queue.md
       - map: CSPJ/数据结构/map.md
+    - 搜索:
+      - 深度优先搜索: CSPJ/搜索/深度优先搜索.md
+      - 搜索剪枝: CSPJ/搜索/剪枝.md
+      - 状态图遍历: CSPJ/搜索/状态图遍历.md
     - 高精度: CSPJ/高精度/big_int.md
     - 链表: CSPJ/链表/list.md
     - 二分:
