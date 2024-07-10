@@ -21,6 +21,7 @@
 - `m.count(key)`：返回 `key` 映射到的 `value` 的个数，可以用于判断是否存在 `key` 映射。
 - `m.clear()`：清空容器。
 - `m.find(key)`：返回 `key` 映射到的 `value` 的迭代器。
+    - 可以使用 `m.find(key) != m.end()` 来判断是否存在一个 `key` 映射。
 - `m.begin()`：返回第一个映射的迭代器。
 - `m.end()`：返回最后一个映射的迭代器。
 - `m.size()`：返回容器中映射的个数。
@@ -40,6 +41,7 @@ cout << m[1] << endl;        // 5
 cout << m.count(7) << endl;  // 0
 cout << m.count(1) << endl;  // 1
 cout << m[2] << endl;        // 0
+cout << (m.find(11) == m.end()) << endl;  // 1
 ```
 
 ## 遍历
