@@ -51,10 +51,15 @@ nav:
       - 幂运算: CSPJ/数学/幂运算.md
       - 集合论: CSPJ/数学/集合论.md
       - 组合数学: CSPJ/数学/组合数学.md
+      - 题目汇总: CSPJ/数学/problem.md
   - CSPS: 
     - 简介: CSPS/index.md
     - ST 表: CSPS/sparse_table/sparse_table.md
     - 树状数组:   CSPS/fenwick/fenwick.md
+    - 区间 DP: CSPS/range_dp/range_dp.md
+    - 树 DP: CSPS/tree_dp/tree_dp.md
+    - 状压 DP: CSPS/bitmask_dp/bitmask_dp.md
+    - 拓扑排序: CSPS/topo/topo.md
     - 数据结构:
       - 二叉堆: 
         - 概念: CSPS/ds/heap/二叉堆.md
