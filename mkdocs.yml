@@ -30,7 +30,9 @@ nav:
       - 链表: CSPJ/数据结构/链表/list.md
       - 题目: CSPJ/数据结构/problem.md
     - 搜索:
-      - 深度优先搜索: CSPJ/搜索/深度优先搜索.md
+      - 搜索和dfs介绍: CSPJ/搜索/dfs_intro.md
+      - dfs的四个基本模型: CSPJ/搜索/dfs的四个基本模型.md
+      - 另类的搜索: CSPJ/搜索/另类的搜索.md
       - 搜索剪枝: CSPJ/搜索/剪枝.md
       - 状态图遍历: CSPJ/搜索/状态图遍历.md
       - 题单: CSPJ/搜索/problem.md
