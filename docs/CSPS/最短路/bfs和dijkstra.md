@@ -26,11 +26,77 @@ while (状态队列不为空){
 }
 ```
 
+### 代码
+
+```cpp
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int N = 1e5 + 5;
+
+int n, m;
+int ans[N], pre[N];  // pre 记录当前点是由哪个点转移而来的，换言之记录了 bfs 树中每个结点的父亲
+vector<int> G[N];
+
+struct Node{
+  int x;
+  int step;
+};
+queue<Node> q;
+
+void Record(int v, int step, int u){
+  if(ans[v] != -1){
+    return;
+  }
+  ans[v] = step, pre[v] = u;
+  q.push({v, step});
+}
+
+void bfs(int x){
+  Record(x, 0, 0);
+  while(!q.empty()){
+    Node u = q.front();
+    q.pop();
+    for(int v : G[u.x]){
+      Record(v, u.step + 1, u.x);
+    }
+  }
+}
+
+void print(int u){
+  if(!u){
+    return;
+  }
+  print(pre[u]);
+  cout << u << " ";
+}
+
+int main(){
+  cin >> n >> m;
+  for(int i = 1, u, v; i <= m; i++){
+    cin >> u >> v;
+    G[u].push_back(v);
+    G[v].push_back(u);
+  }
+  fill(ans + 1, ans + 1 + n, -1);
+  bfs(1);
+  if(ans[n] == -1){
+    cout << "IMPOSSIBLE";
+    return 0;
+  }
+  cout << ans[n] + 1 << "\n";
+  print(n);
+  return 0;
+}
+```
+
 ### 特征
 
 * 本质是对状态转移图按层（分层）遍历。
 * 第一次遍历到某个状态时，就得到了它的最优化属性值。
 * 队列中所有状态的最优化属性值具有单调性和两段性。
+* 从 bfs 树的角度考虑，原图上的边只会在同层点或相邻两层点之间。
 
 ### 时间复杂度
 
@@ -122,6 +188,10 @@ void dij() {
           }
         };
 
+        struct Edge {
+          int v, w;  // 一条边的终点，边权
+        };
+
         int dis[MAXN];  // 记录最短路的长度
         int vis[MAXN];  // 标记是否已确定最短路
 
@@ -136,10 +206,10 @@ void dij() {
             if (vis[now.u]) {
               continue;
             }
-            vis[now.u] = 1;  // 第一次取出某结点时是最短的
+            vis[now.u] = 1;
             for (Edge e : g[now.u]) {
               if (dis[e.v] > now.w + e.w) {  // 松弛操作
-                dis[e.v] = now.w + e.w, pq.push({u, w});
+                dis[e.v] = now.w + e.w, pq.push({e.v, now.w + e.w});
               }
             }
           }
@@ -154,6 +224,10 @@ void dij() {
           bool operator < (const Node &i) const {
             return w > i.w;
           }
+        };
+
+        struct Edge {
+          int v, w;  // 一条边的终点，边权
         };
 
         int dis[MAXN];
@@ -171,7 +245,7 @@ void dij() {
             }
             dis[now.u] = now.w;  // 第一次取出某结点时是最短的
             for (Edge e : g[now.u]) {
-              dis[e.v] = now.w + e.w, pq.push({u, w});
+              pq.push({e.v, now.w + e.w});
             }
           }
         }
@@ -181,4 +255,43 @@ void dij() {
 
 - BFS 能保证第一次转移到的状态就是最优状态，DIJ 不能
 - DIJ 保证第一次取出的状态是最优的状态
+
+### 常见错误
+
+以下代码是超时的。
+
+```cpp
+struct Node {
+  int u, w;  // 点，源点到该点的距离值
+  bool operator<(const Node &i) const {
+    return w > i.w;
+  }
+};
+
+struct Edge {
+  int v, w;  // 一条边的终点，边权
+};
+
+int dis[MAXN];  // 记录最短路的长度
+int vis[MAXN];  // 标记是否已确定最短路
+
+priority_queue<Node> pq;  // 按 w 排序
+
+void dij(int s) {
+  fill(dis + 1, dis + n + 1, INT_MAX);  // distance
+  dis[s] = 0, pq.push({s, 0});
+  while (!pq.empty()) {
+    Node now = pq.top();  // 取出优先队列中距离值最小的点
+    pq.pop();
+    if (now.w > dis[now.u]) {  // 写 > 会超时，写 >= 也是错误的
+      continue;
+    }
+    for (Edge e : g[now.u]) {
+      if (dis[e.v] > now.w + e.w) {  // 松弛操作
+        dis[e.v] = now.w + e.w, pq.push({e.v, now.w + e.w});
+      }
+    }
+  }
+}
+```
 

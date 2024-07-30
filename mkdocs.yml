@@ -38,8 +38,10 @@ nav:
       - 题单: CSPJ/搜索/problem.md
     - 高精度: CSPJ/高精度/big_int.md
     - 二分:
-      - 二分查找: CSPJ/二分/二分查找.md
-      - 二分答案: CSPJ/二分/二分答案.md
+      - 二分查找_老版: CSPJ/二分/二分查找_老版.md
+      - 二分答案_老版: CSPJ/二分/二分答案_老版.md
+      - 二分查找_新版: CSPJ/二分/二分查找_新版.md
+      - 二分答案_新版: CSPJ/二分/二分答案_新版.md
       - 题单: CSPJ/二分/problem.md
     - 数学:
       - 数学符号: CSPJ/数学/notation.md
@@ -62,6 +64,10 @@ nav:
     - 树 DP: CSPS/tree_dp/tree_dp.md
     - 状压 DP: CSPS/bitmask_dp/bitmask_dp.md
     - 拓扑排序: CSPS/topo/topo.md
+    - 最短路: 
+      - 介绍: CSPS/最短路/intro.md
+      - bfs和dijktra: CSPS/最短路/bfs和dijkstra.md
+      - floyd: CSPS/最短路/floyd.md
     - 数据结构:
       - 二叉堆: 
         - 概念: CSPS/ds/heap/二叉堆.md
